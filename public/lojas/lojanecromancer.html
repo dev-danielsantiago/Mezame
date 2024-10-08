@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/loja.css"> <!-- Referência para o CSS -->
+    <title>Loja Necromancer - Porquinho Mágico</title>
+</head>
+
+<body data-loja="lojanecromancer">
+
+    <header>
+        <h1>Loja Necromancer</h1>
+        <div id="saldoContainer">
+            <div id="saldo">Saldo: $0.00</div> <!-- Saldo do jogador -->
+        </div>
+    </header>
+    <div id="itensContainer">
+        <ul id="itens"></ul> <!-- Itens da loja serão carregados aqui como lista -->
+    </div>
+
+    <!-- Som de moeda -->
+    <audio id="somMoeda" src="../audio/moeda.mp3"></audio> <!-- Som de moeda ao comprar -->
+
+<script src="/lojas/loja.js"></script>
+</body>
+
+</html>

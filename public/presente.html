@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Presente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Enviar Presente</h1>
+
+    <!-- Exibe o nome do jogador logado -->
+    <p>Bem-vindo, <span id="nomeJogador">Jogador</span>!</p>
+
+    <!-- Exibe o saldo do jogador -->
+    <p>Saldo: <span id="saldo">0</span> Dracmas</p>
+
+    <!-- Formulário para envio de presente -->
+    <form id="presenteForm">
+        <label for="destinatario">Selecione o destinatário:</label>
+        <select id="destinatario" name="destinatario" required>
+            <!-- Este campo será preenchido dinamicamente com os jogadores disponíveis -->
+        </select>
+
+        <p>Escolha uma caixa:</p>
+        <button type="button" class="btn-caixa" data-caixa="normal">Normal - 100 Dracmas</button>
+        <button type="button" class="btn-caixa" data-caixa="superior">Superior - 200 Dracmas</button>
+        <button type="button" class="btn-caixa" data-caixa="lenda">Lenda - 300 Dracmas</button>
+
+        <!-- Input oculto para armazenar a escolha da caixa -->
+        <input type="hidden" id="caixaEscolhida" name="caixaEscolhida" required>
+
+        <br><br>
+        <button type="submit">Enviar Presente</button>
+    </form>
+
+    <!-- Exibe o feedback com o item sorteado -->
+    <div id="feedbackItem"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const nomeJogadorElement = document.getElementById('nomeJogador');
+            const saldoElement = document.getElementById('saldo');
+            const destinatarioSelect = document.getElementById('destinatario');
+            const caixaEscolhidaInput = document.getElementById('caixaEscolhida');
+            const feedbackItem = document.getElementById('feedbackItem');
+        
+            // Recupera o nome do jogador logado do localStorage
+            const username = localStorage.getItem('username');
+        
+            // Exibe o nome do jogador logado
+            if (username) {
+                nomeJogadorElement.textContent = username;
+            } else {
+                console.error('Usuário não encontrado no localStorage.');
+                alert('Usuário não encontrado. Faça login novamente.');
+                window.location.href = '/'; // Redireciona para a página de login
+                return;
+            }
+        
+            // Função para carregar o saldo do jogador
+            function carregarSaldo() {
+                if (!username) return; // Garantir que o username esteja definido
+        
+                fetch(`/get-saldo?username=${encodeURIComponent(username)}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.saldo !== undefined) {
+                            saldoElement.textContent = `Dracmas: ${parseFloat(data.saldo).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
+                        } else {
+                            console.error('Erro ao carregar saldo:', data.message);
+                        }
+                    })
+                    .catch(error => console.error('Erro ao carregar saldo:', error));
+            }
+        
+            // Função para carregar os destinatários (outros jogadores)
+            function carregarDestinatarios() {
+                fetch('/get-players')
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.players && data.players.length > 0) {
+                            data.players.forEach(player => {
+                                const option = document.createElement('option');
+                                option.value = player.username;
+                                option.textContent = player.username;
+                                destinatarioSelect.appendChild(option);
+                            });
+                        } else {
+                            console.error('Nenhum destinatário encontrado.');
+                            alert('Nenhum jogador disponível para receber presentes.');
+                        }
+                    })
+                    .catch(error => console.error('Erro ao carregar destinatários:', error));
+            }
+        
+            // Carregar saldo e destinatários ao carregar a página
+            carregarSaldo();
+            carregarDestinatarios();
+        
+            // Função para selecionar a caixa
+            document.querySelectorAll('.btn-caixa').forEach(button => {
+                button.addEventListener('click', function () {
+                    caixaEscolhidaInput.value = this.getAttribute('data-caixa');
+                    console.log('Caixa escolhida:', caixaEscolhidaInput.value);
+                });
+            });
+        
+            // Envia o presente ao destinatário
+            document.getElementById('presenteForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+        
+                const destinatario = destinatarioSelect.value;
+                const tipoCaixa = caixaEscolhidaInput.value;
+        
+                if (!destinatario) {
+                    alert('Por favor, selecione um destinatário.');
+                    return;
+                }
+        
+                if (!tipoCaixa) {
+                    alert('Por favor, escolha uma caixa.');
+                    return;
+                }
+        
+                fetch('/enviar-presente', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ remetente: username, destinatario, tipoCaixa })
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.message) {
+                        feedbackItem.innerHTML = `
+                            <p>${data.message}</p>
+                            <div class="card">
+                                <h3>Item Sorteado: ${data.item}</h3>
+                                <p>${data.descricao}</p>
+                                <img src="${data.imagem}" alt="${data.item}" />
+                            </div>
+                        `;
+                        saldoElement.textContent = `Dracmas: ${parseFloat(data.saldo).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`; // Atualiza o saldo instantaneamente
+                    } else {
+                        feedbackItem.textContent = 'Erro ao enviar o presente.';
+                    }
+                })
+                .catch(error => console.error('Erro ao enviar presente:', error));
+            });
+        });
+
+    </script>    
+
+</body>
+
+</html>

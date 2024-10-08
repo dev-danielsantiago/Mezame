@@ -1,0 +1,137 @@
+{
+  "inventarios": [
+    {
+      "username": "Hsbiel",
+      "presentes": [
+        {
+          "tipoCaixa": "lenda",
+          "item": "Luva de Batalha",
+          "descricao": "Luva resistente usada por lutadores para melhorar a aderência e aumentar a proteção durante combates. Nível: Comum.",
+          "imagem": "caminho/para/luva_batalha.jpg",
+          "origem": "presente"
+        },
+        {
+          "tipoCaixa": "normal",
+          "item": "A comedora de cu",
+          "descricao": "Faz a pessoa te dar o cu",
+          "imagem": "Imagem indisponível",
+          "origem": "presente"
+        },
+        {
+          "tipoCaixa": "normal",
+          "item": "Luva de Batalha",
+          "descricao": "Luva resistente usada por lutadores para melhorar a aderência e aumentar a proteção durante combates. Nível: Comum.",
+          "imagem": "caminho/para/luva_batalha.jpg",
+          "origem": "presente"
+        },
+        {
+          "nome": "Elixir da Vitalidade",
+          "descricao": "Aumenta temporariamente os pontos de vida máximos do usuário em 50%.",
+          "valor": 1000,
+          "imagem": "caminho/para/imagem/elixir_vitalidade.png",
+          "origem": "comprado"
+        },
+        {
+          "nome": "Katana Comumm",
+          "descricao": "Uma arma simples e eficiente, amplamente usada por guerreiros iniciantes em combates rápidos.<br> <strong>Dano:</strong> 20 + 1d4 (corte), <strong>Durabilidade:</strong> 2s.",
+          "valor": 242,
+          "imagem": "/img/lojaSamurai/katanaComum.png",
+          "origem": "comprado"
+        }
+      ]
+    },
+    {
+      "username": "Viny001",
+      "presentes": [
+        {
+          "tipoCaixa": "normal",
+          "item": "Item não encontrado",
+          "descricao": "Descrição indisponível",
+          "imagem": "Imagem indisponível",
+          "origem": "presente"
+        },
+        {
+          "tipoCaixa": "superior",
+          "item": "Item não encontrado",
+          "descricao": "Descrição indisponível",
+          "imagem": "Imagem indisponível",
+          "origem": "presente"
+        },
+        {
+          "tipoCaixa": "lenda",
+          "item": "Item não encontrado",
+          "descricao": "Descrição indisponível",
+          "imagem": "Imagem indisponível",
+          "origem": "presente"
+        }
+      ]
+    },
+    {
+      "username": "Trazcks",
+      "presentes": []
+    },
+    {
+      "username": "Necrolorde",
+      "presentes": [
+        {
+          "tipoCaixa": "normal",
+          "item": "Cinto de Força",
+          "descricao": "Cinto mágico que concede um bônus de força ao usuário, ideal para levantar cargas pesadas em combate. Nível: Incomum.",
+          "imagem": "caminho/para/cinto_forca.jpg",
+          "origem": "presente"
+        },
+        {
+          "tipoCaixa": "normal",
+          "item": "Luva de Batalha",
+          "descricao": "Luva resistente usada por lutadores para melhorar a aderência e aumentar a proteção durante combates. Nível: Comum.",
+          "imagem": "caminho/para/luva_batalha.jpg",
+          "origem": "presente"
+        }
+      ]
+    },
+    {
+      "username": "Cammy",
+      "presentes": []
+    },
+    {
+      "username": "Number",
+      "presentes": [
+        {
+          "nome": "Katana Incomum",
+          "descricao": "Uma arma poderosa com espaço para uma runa, ideal para guerreiros que buscam personalizar suas armas com encantamentos.<br><strong>Dano:</strong> 30 + 1d12 (corte), <strong>Durabilidade:</strong> 2s",
+          "valor": 670,
+          "imagem": "/img/lojaSamurai/katanaIncomum.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        }
+      ]
+    },
+    {
+      "username": "Mestre",
+      "presentes": []
+    },
+    {
+      "username": "Crossroad",
+      "presentes": []
+    },
+    {
+      "username": "Reis",
+      "presentes": [
+        {
+          "nome": "Katana Comumm",
+          "descricao": "Uma arma simples e eficiente, amplamente usada por guerreiros iniciantes em combates rápidos.<br> <strong>Dano:</strong> 20 + 1d4 (corte), <strong>Durabilidade:</strong> 2s.",
+          "valor": 242,
+          "imagem": "/img/lojaSamurai/katanaComum.png",
+          "origem": "comprado"
+        },
+        {
+          "nome": "Yoroi ",
+          "descricao": "Este magnífico conjunto de armadura samurai é forjado com placas de aço polido, meticulosamente trabalhadas para refletir a luz de forma imponente. Detalhes em ouro adornam cada peça, com símbolos que representam os ideais de honra e tradição do samurai gravados em relevo. A combinação de elegância e força faz desta armadura uma verdadeira obra de arte.<br><strong>HpD: </strong>150 <strong>Durabilidade:</strong> 3s",
+          "valor": 12298,
+          "imagem": "/img/lojaSamurai/armaduraYoroi.png",
+          "origem": "comprado"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+    "itens": [
+      {
+        "id": "assassino1",
+        "nome": "Granada",
+        "material": "Pólvora negra e aço reforçado",
+        "efeito": "Causa 3d12 de dano em uma área de 4x4. Acerto +2.",
+        "imagem": "/img/itens/granada.png",
+        "valor": 500,
+        "descricao": "Uma granada explosiva usada para causar dano massivo em uma área. Ideal para eliminar grupos de inimigos.",
+        "quantidade": 5
+      },
+      {
+        "id": "assassino2",
+        "nome": "Venenos Diversos",
+        "material": "Ervas raras, substâncias tóxicas e alquimia especializada",
+        "efeito": "Vários tipos de venenos para situações específicas, causando 10 de dano. Acerto +1.",
+        "imagem": "/img/itens/veneno.png",
+        "valor": 300,
+        "descricao": "Uma coleção de venenos para serem usados em diferentes situações. Causa dano adicional e pode envenenar o alvo.",
+        "quantidade": 10
+      },
+      {
+        "id": "assassino3",
+        "nome": "Adaga Venenosa (Desolação)",
+        "material": "Aço venenoso e runas de ocultismo",
+        "efeito": "Causa 1d12+4 de dano. Dano adicional de veneno: 2d6 + Medicina e Ocultismo.",
+        "imagem": "/img/itens/adagaDesolacao.png",
+        "valor": 900,
+        "descricao": "Uma adaga perfurante que aplica veneno ao alvo, infligindo dano contínuo com base em medicina e ocultismo.",
+        "quantidade": 3
+      },
+      {
+        "id": "assassino4",
+        "nome": "Adaga de Aparar",
+        "material": "Aço leve e encantamentos defensivos",
+        "efeito": "Causa 1d12+4 de dano. Chance mínima de anular ataques físicos diretos.",
+        "imagem": "/img/itens/adagaAparar.png",
+        "valor": 600,
+        "descricao": "Uma adaga afiada que, além de causar dano, oferece uma pequena chance de aparar ataques físicos de oponentes.",
+        "quantidade": 6
+      },
+      {
+        "id": "assassino5",
+        "nome": "Ira do Inverno",
+        "material": "Couro leve encantado com runas de proteção",
+        "efeito": "Concede +1 de Destreza. Bônus de +2 em testes de esquiva. Vida da Armadura: 24, Durabilidade: 12.",
+        "imagem": "/img/itens/iraInverno.png",
+        "valor": 750,
+        "descricao": "Uma vestimenta leve e resistente que oferece proteção e agilidade em combate, ideal para assassinos furtivos.",
+        "quantidade": 5
+      },
+      {
+        "id": "assassino6",
+        "nome": "Presa do Governante do Pântano",
+        "material": "Metal venenoso e magia de paralisia",
+        "efeito": "Causa 3d6 + 8 de dano perfurante. Toxina paralisante com chance de paralisar o alvo.",
+        "imagem": "/img/itens/presaPantano.png",
+        "valor": 1200,
+        "descricao": "Uma adaga perigosa usada para infligir dano pesado e paralisar oponentes, deixando-os indefesos.",
+        "quantidade": 2
+      },
+      {
+        "id": "assassino7",
+        "nome": "Set do Assassino de Fulgor",
+        "material": "Tecido mágico e placas leves",
+        "efeito": "Concede +3 de Destreza e bônus de +3 em testes de esquiva. Vida da Armadura: 32, Durabilidade: 17.",
+        "imagem": "/img/itens/setAssassinoFulgor.png",
+        "valor": 1100,
+        "descricao": "Um conjunto de vestimenta que maximiza a agilidade e a furtividade, ideal para assassinos em missões críticas.",
+        "quantidade": 3
+      },
+      {
+        "id": "assassino8",
+        "nome": "Tanto da Dissolução",
+        "material": "Aço corrosivo e magia de dissolução",
+        "efeito": "Causa 1d4 de dano perfurante e 1d6 de dano ácido por rodada. Dissolve armaduras não mágicas.",
+        "imagem": "/img/itens/tantoDissolucao.png",
+        "valor": 1300,
+        "descricao": "Uma adaga mortal que dissolve o alvo com ácido, enfraquecendo suas defesas ao longo do tempo.",
+        "quantidade": 2
+      },
+      {
+        "id": "assassino9",
+        "nome": "Punhal da Morte Silenciosa",
+        "material": "Aço encantado com runas de silêncio",
+        "efeito": "Concede +2 de bônus de ataque sorrateiro. Permite lançar 'Silêncio' uma vez por dia.",
+        "imagem": "/img/itens/punhalSilencioso.png",
+        "valor": 1400,
+        "descricao": "Um punhal furtivo que permite atacar sem emitir som, ideal para ataques surpresa e operações sigilosas.",
+        "quantidade": 2
+      },
+      {
+        "id": "assassino10",
+        "nome": "Espada do Lamento",
+        "material": "Aço sombrio e encantamento de destruição",
+        "efeito": "Concede +2 de bônus de dano contra alvos abaixo de 50% de vida. Permite lançar 'Perdição' uma vez por dia.",
+        "imagem": "/img/itens/espadaLamento.png",
+        "valor": 1800,
+        "descricao": "Uma espada sombria que causa mais dano contra inimigos enfraquecidos e pode amaldiçoá-los com magia de perdição.",
+        "quantidade": 1
+      },
+      {
+        "id": "assassino11",
+        "nome": "Besta da Sombra Velada",
+        "material": "Metal negro e virotes sombrios",
+        "efeito": "Concede +2 de bônus em ataques sorrateiros. Causa cegueira temporária ao atingir o alvo.",
+        "imagem": "/img/itens/bestaSombraVelada.png",
+        "valor": 1500,
+        "descricao": "Uma besta silenciosa que cega temporariamente seus alvos e aumenta o dano de ataques furtivos.",
+        "quantidade": 1
+      }
+    ]
+  }
+  

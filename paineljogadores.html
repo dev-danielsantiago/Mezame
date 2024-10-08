@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking dos Jogadores</title>
+    <link rel="stylesheet" href="rank.css">
+</head>
+<body>
+    <header>
+        <h1>Ranking dos Jogadores</h1>
+    </header>
+    <main>
+        <section class="ranking">
+            <h2>Jogadores com Mais Dracmas</h2>
+            <ul id="ranking-list" class="ranking-list">
+                <!-- Lista de jogadores com mais Dracmas -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Porquinho Mágico RPG. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+// Função para buscar dados do ranking
+async function carregarRanking() {
+    try {
+        console.log('Iniciando o carregamento do ranking...');
+        const response = await fetch('http://localhost:3000/saldo-jogadores');
+        console.log('Requisição feita para /saldo-jogadores, status:', response.status);
+        const data = await response.json();
+        console.log('Dados recebidos do servidor:', data);
+
+        if (response.ok && data) {
+            const rankingList = document.getElementById('ranking-list');
+            rankingList.innerHTML = '';
+            console.log('Atualizando a lista de jogadores no ranking...');
+
+            // Ordena os jogadores por saldo e, em seguida, por número de vitórias
+            const jogadoresOrdenados = data.sort((a, b) => {
+                if ((b.saldo || 0) !== (a.saldo || 0)) {
+                    return (b.saldo || 0) - (a.saldo || 0);
+                } else {
+                    return b.vitorias - a.vitorias;
+                }
+            });
+
+            // Preenche a lista de jogadores no ranking
+            jogadoresOrdenados.forEach(jogador => {
+                console.log('Adicionando jogador ao ranking:', jogador.username);
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <span class="player-name">${jogador.username}</span>
+                    <span class="player-jokenpo">Vitórias no Jokenpo: ${jogador.vitorias || 0} | Derrotas: ${jogador.derrotas || 0} | Saldo: ${jogador.saldo || 0} Dracmas</span>
+                `;
+                rankingList.appendChild(li);
+            });
+        } else {
+            console.error('Erro ao buscar dados do ranking:', data.message);
+        }
+    } catch (error) {
+        console.error('Erro ao carregar ranking:', error);
+    }
+}
+
+
+        // Função para atualizar vitórias e derrotas no JSON
+        async function atualizarResultados(username, resultado) {
+            try {
+                console.log('Iniciando atualização de resultados para o jogador:', username, 'com resultado:', resultado);
+                // Busca o JSON atual de vitórias e derrotas
+                const response = await fetch('http://localhost:3000/get-jokenpo-resultados');
+                console.log('Requisição feita para /get-jokenpo-resultados, status:', response.status);
+                const data = await response.json();
+                console.log('Dados recebidos para atualização:', data);
+
+                if (response.ok && data.jogadores) {
+                    const jogador = data.jogadores.find(j => j.username === username);
+                    if (jogador) {
+                        // Atualiza vitórias ou derrotas com base no resultado
+                        if (resultado === 'ganhou') {
+                            jogador.vitorias += 1;
+                        } else if (resultado === 'perdeu') {
+                            jogador.derrotas += 1;
+                        }
+
+                        // Envia o JSON atualizado de volta ao servidor
+                        console.log('Enviando dados atualizados para o servidor:', data);
+                        await fetch('http://localhost:3000/update-jokenpo-resultados', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(data)
+                        });
+                        console.log('Resultados atualizados com sucesso para o jogador:', username);
+                    } else {
+                        console.error('Jogador não encontrado no JSON:', username);
+                    }
+                } else {
+                    console.error('Erro ao buscar os dados dos jogadores:', data.message);
+                }
+            } catch (error) {
+                console.error('Erro ao atualizar vitórias e derrotas:', error);
+            }
+        }
+
+        // Atualiza vitórias e derrotas após o resultado do Jokenpo
+        document.getElementById('apostarBtn')?.addEventListener('click', async () => {
+            console.log('Botão de aposta clicado. Iniciando processo de aposta...');
+            // ... (código existente para calcular o resultado)
+
+            // Determina o resultado do jogo
+            const resultado = calcularResultado(jogada, jogadaComputador);
+            console.log('Resultado do jogo determinado:', resultado);
+
+            // Atualiza o JSON com vitórias e derrotas
+            await atualizarResultados(username, resultado);
+
+            // Registrar a aposta no servidor (código existente)
+            // ...
+        });
+
+        // Carrega o ranking ao carregar a página
+        window.onload = function() {
+            console.log('Página carregada, iniciando carregamento do ranking...');
+            carregarRanking();
+        }
+    </script>
+</body>
+</html>

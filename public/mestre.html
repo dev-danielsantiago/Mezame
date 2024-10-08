@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mestre - Porquinho Mágico</title>
+    <link rel="stylesheet" href="mestre.css">
+</head>
+<body>
+    <h1>Painel do Mestre</h1>
+        <img src="img/dinheiro.png" alt="">
+    <h2>Modificar Saldo dos Jogadores</h2>
+    <form id="modificarSaldoForm">
+        <label for="jogador">Jogador:</label>
+        <select id="jogador" name="jogador" required></select>
+
+        <label for="valor">Valor:</label>
+        <input type="number" id="valor" name="valor" required>
+        
+        <label for="acao">Ação:</label>
+        <select id="acao" name="acao" required>
+            <option value="aumentar">Aumentar</option>
+            <option value="diminuir">Diminuir</option>
+        </select>
+        
+        <button type="submit">Modificar Saldo</button>
+    </form>
+    <div id="mestreMsg"></div>
+
+    <h2>Saldo dos Jogadores</h2>
+    <table id="tabela-saldos">
+        <thead>
+            <tr>
+                <th>Jogador</th>
+                <th>Saldo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os dados dos jogadores serão inseridos aqui -->
+        </tbody>
+    </table>
+
+    <script>
+        // Função para formatar o saldo
+        function formatarSaldo(valor) {
+            return valor.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); // Adiciona pontos para milhares
+        }
+
+        // Função para atualizar a tabela de saldos
+        function atualizarTabelaSaldos() {
+            fetch('/saldo-jogadores')
+                .then(response => response.json())
+                .then(players => {
+                    const tbody = document.querySelector('#tabela-saldos tbody');
+                    tbody.innerHTML = ''; // Limpa a tabela existente
+
+                    players.forEach(player => {
+                        const row = document.createElement('tr');
+                        const saldoFormatado = formatarSaldo(player.saldo);
+                        row.innerHTML = `<td>${player.username}</td><td>${saldoFormatado}</td>`;
+                        tbody.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('Erro ao atualizar a tabela:', error));
+        }
+
+        // Adiciona evento de submissão ao formulário
+        document.querySelector('#modificarSaldoForm').addEventListener('submit', (event) => {
+            event.preventDefault(); // Impede o comportamento padrão de submissão
+
+            const jogador = document.querySelector('#jogador').value; // O jogador selecionado
+            const valor = parseFloat(document.querySelector('#valor').value); // O valor a ser modificado
+            const acao = document.querySelector('#acao').value; // Ação: aumentar ou diminuir
+
+            fetch('/modificar-saldo', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ jogador, valor, acao }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                atualizarTabelaSaldos(); // Atualiza a tabela após a modificação
+            })
+            .catch(error => console.error('Erro ao modificar saldo:', error));
+        });
+
+        // Inicializa a tabela na primeira carga
+        atualizarTabelaSaldos();
+
+        // Função para preencher a lista de jogadores no seletor
+        function preencherListaJogadores() {
+            fetch('/saldo-jogadores')
+                .then(response => response.json())
+                .then(players => {
+                    const jogadorSelect = document.querySelector('#jogador');
+                    jogadorSelect.innerHTML = ''; // Limpa o seletor existente
+                    players.forEach(player => {
+                        const option = document.createElement('option');
+                        option.value = player.username;
+                        option.textContent = player.username;
+                        jogadorSelect.appendChild(option);
+                    });
+                })
+                .catch(error => console.error('Erro ao preencher a lista de jogadores:', error));
+        }
+
+        // Chama a função para preencher a lista de jogadores
+        preencherListaJogadores();
+    </script>
+</body>
+</html>

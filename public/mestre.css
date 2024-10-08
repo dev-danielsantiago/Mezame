@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #E75480;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #E75480;
+    margin: 20px 0 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+form label {
+    text-align: left;
+}
+
+form select, 
+form input {
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #E75480;
+    background-color: #222;
+    color: #fff;
+}
+
+button {
+    background-color: #E75480;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d84e8c;
+}
+
+#mestreMsg {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, 
+table td {
+    padding: 10px;
+    border: 1px solid #E75480;
+}
+
+table th {
+    background-color: #333;
+    color: #E75480;
+}
+
+table tr:nth-child(even) {
+    background-color: #222;
+}
+
+table tr:hover {
+    background-color: #444;
+}
+
+
+img{
+    max-width: 250px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Menos espaço nas bordas em telas menores */
+    }
+
+    h1 {
+        font-size: 24px; /* Tamanho de fonte menor para cabeçalhos */
+    }
+
+    h2 {
+        font-size: 20px; /* Ajusta o tamanho dos subtítulos */
+    }
+
+    form {
+        gap: 8px; /* Menos espaço entre os campos do formulário */
+    }
+
+    button {
+        padding: 10px 20px; /* Ajusta o padding do botão */
+        font-size: 14px; /* Tamanho de fonte menor */
+    }
+
+    table {
+        font-size: 14px; /* Ajusta o tamanho da fonte da tabela */
+    }
+
+    table th, 
+    table td {
+        padding: 8px; /* Menos padding nas células da tabela */
+    }
+}
+
+img{
+    max-height: 200px;
+}

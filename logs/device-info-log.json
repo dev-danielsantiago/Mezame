@@ -1,0 +1,56 @@
+[
+  {
+    "larguraTela": 639,
+    "alturaTela": 918,
+    "tipoDispositivo": "mobile",
+    "navegador": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Mobile Safari/537.36 Edg/129.0.0.0",
+    "sistemaOperacional": "Win32",
+    "resolucaoTela": "639x918",
+    "timestamp": "2024-10-01T15:29:02.203Z"
+  },
+  {
+    "larguraTela": 586,
+    "alturaTela": 918,
+    "tipoDispositivo": "mobile",
+    "navegador": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Mobile Safari/537.36 Edg/129.0.0.0",
+    "sistemaOperacional": "Win32",
+    "resolucaoTela": "586x918",
+    "timestamp": "2024-10-01T15:29:53.440Z"
+  },
+  {
+    "larguraTela": 1920,
+    "alturaTela": 1080,
+    "tipoDispositivo": "desktop",
+    "navegador": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0",
+    "sistemaOperacional": "Win32",
+    "resolucaoTela": "1912x920",
+    "timestamp": "2024-10-01T15:38:21.423Z"
+  },
+  {
+    "larguraTela": 360,
+    "alturaTela": 660,
+    "tipoDispositivo": "mobile",
+    "navegador": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/26.0 Chrome/122.0.0.0 Mobile Safari/537.36",
+    "sistemaOperacional": "Linux armv81",
+    "resolucaoTela": "360x660",
+    "timestamp": "2024-10-01T15:38:44.458Z"
+  },
+  {
+    "larguraTela": 1920,
+    "alturaTela": 1080,
+    "tipoDispositivo": "desktop",
+    "navegador": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0",
+    "sistemaOperacional": "Win32",
+    "resolucaoTela": "1912x920",
+    "timestamp": "2024-10-01T15:40:06.965Z"
+  },
+  {
+    "larguraTela": 586,
+    "alturaTela": 918,
+    "tipoDispositivo": "mobile",
+    "navegador": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Mobile Safari/537.36 Edg/129.0.0.0",
+    "sistemaOperacional": "Win32",
+    "resolucaoTela": "586x918",
+    "timestamp": "2024-10-01T15:41:07.535Z"
+  }
+]

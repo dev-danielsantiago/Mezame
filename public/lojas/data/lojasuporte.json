@@ -1,0 +1,114 @@
+{
+    "itens": [
+        {
+            "id": "suporte1",
+            "nome": "Mochila Aprimorada",
+            "material": "Couro de dragão e magia de expansão",
+            "efeito": "Aumenta a capacidade de armazenamento em +10 unidades.",
+            "imagem": "/img/itens/mochilaAprimorada.png",
+            "valor": 300,
+            "descricao": "Uma mochila mágica que aumenta sua capacidade de armazenamento, permitindo carregar mais itens durante aventuras.",
+            "quantidade": 5
+        },
+        {
+            "id": "suporte2",
+            "nome": "Máscara Ocultadora",
+            "material": "Tecido arcano com runas de ocultação",
+            "efeito": "Oculta informações sobre o usuário, dificultando visões e percepções cósmicas.",
+            "imagem": "/img/itens/mascaraOcultadora.png",
+            "valor": 500,
+            "descricao": "Uma máscara mágica que oculta a identidade do portador, tornando-o invisível a visões cósmicas e percepções sobrenaturais.",
+            "quantidade": 3
+        },
+        {
+            "id": "suporte3",
+            "nome": "Runas de Suporte",
+            "material": "Cristais mágicos com inscrições antigas",
+            "efeito": "Permite a compra de runas com dinheiro.",
+            "imagem": "/img/itens/runasSuporte.png",
+            "valor": 600,
+            "descricao": "Runas mágicas que podem ser adquiridas com dinheiro, oferecendo melhorias e encantamentos durante suas aventuras.",
+            "quantidade": 10
+        },
+        {
+            "id": "suporte4",
+            "nome": "Kit de Curadores",
+            "material": "Bandagens, unguentos e talas encantadas",
+            "efeito": "Concede bônus em primeiros socorros e estabilização de personagens feridos.",
+            "imagem": "/img/itens/kitCuradores.png",
+            "valor": 150,
+            "descricao": "Um kit completo para curadores, contendo todos os itens essenciais para tratamento de ferimentos em campo.",
+            "quantidade": 8
+        },
+        {
+            "id": "suporte5",
+            "nome": "Talismã do Monge",
+            "material": "Metal sagrado e tecido encantado",
+            "efeito": "Afasta espíritos malignos ao tilintar.",
+            "imagem": "/img/itens/talismaMonge.png",
+            "valor": 400,
+            "descricao": "Um talismã sagrado que afasta espíritos malignos, proporcionando proteção espiritual.",
+            "quantidade": 3
+        },
+        {
+            "id": "suporte6",
+            "nome": "Relicário",
+            "material": "Madeira antiga e cristais de detecção",
+            "efeito": "Detecta a presença de diferentes forças sobrenaturais.",
+            "imagem": "/img/itens/relicario.png",
+            "valor": 700,
+            "descricao": "Um relicário mágico que identifica a presença de forças sobrenaturais, ideal para caçadores de criaturas mágicas.",
+            "quantidade": 2
+        },
+        {
+            "id": "suporte7",
+            "nome": "Cajado do Curandeiro",
+            "material": "Madeira sagrada e runas de cura",
+            "efeito": "Permite lançar 'Cura em Massa' uma vez por dia. Concede +2 de bônus em curas.",
+            "imagem": "/img/itens/cajadoCurandeiro.png",
+            "valor": 1200,
+            "descricao": "Um cajado mágico que emite uma aura curativa poderosa, permitindo curar múltiplas criaturas com uma única ação.",
+            "quantidade": 1
+        },
+        {
+            "id": "suporte8",
+            "nome": "Escudo do Guardião",
+            "material": "Aço sagrado e runas de proteção",
+            "efeito": "Permite lançar 'Escudo de Fé' uma vez por dia. Concede +2 na CA para aliados.",
+            "imagem": "/img/itens/escudoGuardiao.png",
+            "valor": 1100,
+            "descricao": "Um escudo mágico que conjura uma barreira de fé para proteger aliados, aumentando sua defesa em momentos críticos.",
+            "quantidade": 1
+        },
+        {
+            "id": "suporte9",
+            "nome": "Báculo do Ancião",
+            "material": "Madeira ancestral e símbolos de sabedoria",
+            "efeito": "Permite lançar 'Proteção contra o Bem e o Mal' uma vez por dia. Concede +2 em testes de Sabedoria.",
+            "imagem": "/img/itens/baculoAncian.png",
+            "valor": 1300,
+            "descricao": "Um báculo sagrado que protege contra forças malignas e aumenta a sabedoria de quem o empunha.",
+            "quantidade": 1
+        },
+        {
+            "id": "suporte10",
+            "nome": "Anel da Compaixão",
+            "material": "Prata encantada com safira",
+            "efeito": "Permite lançar 'Amizade' uma vez por dia. Concede +2 em testes de Carisma.",
+            "imagem": "/img/itens/anelCompacao.png",
+            "valor": 900,
+            "descricao": "Um anel encantado que emana empatia, facilitando interações pacíficas e carismáticas com outras criaturas.",
+            "quantidade": 3
+        },
+        {
+            "id": "suporte11",
+            "nome": "Flauta da Harmonia",
+            "material": "Ébano mágico e runas musicais",
+            "efeito": "Permite lançar 'Acalmar Emoções' uma vez por dia. Concede +2 em testes de Diplomacia e Intimidação.",
+            "imagem": "/img/itens/flautaHarmonia.png",
+            "valor": 1000,
+            "descricao": "Uma flauta mágica que emite melodias encantadoras, acalmando emoções e facilitando negociações.",
+            "quantidade": 2
+        }
+    ]
+}

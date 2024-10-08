@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Porquinho Mágico</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/porquinho (1).png" type="image/x-icon">
+</head>
+
+<body>
+
+    <h1>Seja Bem-vindo </h1>
+    <img src="img/logo.png" alt="Logo do Porquinho">
+    <h2>✨Porquinho Mágico ✨</h2>
+    <form id="loginForm">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" placeholder="Digite seu nick" required>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+        <button type="submit">Entrar</button>
+    </form>
+    <div id="msg"></div>
+
+<!-- <div id="cookie-consent-banner" class="cookie-banner" style="display: none;">
+        <p style="text-align: center; padding: 10px;">Você gostaria de ganhar um presente?</p>
+        <button id="accept-cookies">Aceitar</button>
+        <button id="decline-cookies">Recusar</button>
+    </div> --> 
+    
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const username = document.getElementById('username').value.trim();
+            const senha = document.getElementById('senha').value.trim();
+    
+            // Verifica se os campos não estão vazios
+            if (!username || !senha) {
+                document.getElementById('msg').innerText = 'Por favor, preencha todos os campos.';
+                return;
+            }
+    
+            try {
+                const response = await fetch(`/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, senha })
+                });
+    
+                const result = await response.json();
+    
+                // Exibir mensagem de erro se o login falhar
+                if (!response.ok) {
+                    document.getElementById('msg').innerText = result.message;
+                    return;
+                }
+    
+                // Limpa o localStorage antes de armazenar os novos dados
+                localStorage.clear();
+                // Armazenar saldo e username no localStorage
+                localStorage.setItem('saldo', result.saldo);
+                localStorage.setItem('username', username);
+    
+                // Definir um cookie para o nome de usuário
+                setCookie("username", username, 7);  // Armazena o cookie por 7 dias
+    
+                // Redirecionar para o dashboard do mestre se for mestre
+                if (result.isMestre) {
+                    window.location.href = 'mestre.html'; // Redireciona para a página do mestre
+                } else {
+                    window.location.href = 'dashboard.html'; // Redireciona para a página do dashboard dos jogadores
+                }
+            } catch (error) {
+                console.error('Erro ao fazer login:', error);
+                document.getElementById('msg').innerText = 'Erro no servidor. Tente novamente mais tarde.';
+            }
+        });
+    
+    
+        // Coletar informações do dispositivo
+        function coletarInformacoesDispositivo() {
+            const larguraTela = window.screen.width;
+            const alturaTela = window.screen.height;
+            const tipoDispositivo = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 'mobile' : 'desktop';
+            const navegador = navigator.userAgent;
+            const sistemaOperacional = navigator.platform;
+            const resolucaoTela = `${window.innerWidth}x${window.innerHeight}`;
+    
+            // Enviar essas informações para o servidor
+            fetch('/save-device-info', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    larguraTela: larguraTela,
+                    alturaTela: alturaTela,
+                    tipoDispositivo: tipoDispositivo,
+                    navegador: navegador,
+                    sistemaOperacional: sistemaOperacional,
+                    resolucaoTela: resolucaoTela
+                })
+            }).then(response => response.json())
+            .then(data => {
+                console.log('Informações de dispositivo enviadas:', data);
+            }).catch(error => {
+                console.error('Erro ao enviar informações de dispositivo:', error);
+            });
+        }
+
+    
+        // Exibir o banner de cookies se o usuário ainda não tiver dado consentimento
+        window.onload = function () {
+            const consentGiven = localStorage.getItem('cookieConsent');
+            if (!consentGiven) {
+                document.getElementById('cookie-consent-banner').style.display = 'block';
+            } else if (consentGiven === 'true') {
+                startDataCollection(); // Se o consentimento foi dado, inicie a coleta de dados
+            }
+        };
+    
+        // Quando o usuário aceita cookies
+        document.getElementById('accept-cookies').addEventListener('click', function () {
+            localStorage.setItem('cookieConsent', 'true'); // Armazena o consentimento no localStorage
+            document.getElementById('cookie-consent-banner').style.display = 'none';
+            startDataCollection(); // Inicia a coleta de dados
+    
+            // Enviar o consentimento ao servidor
+            fetch('/salvar-consentimento', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    consentido: true,
+                    navegador: navigator.userAgent,
+                    url: window.location.href
+                })
+            }).then(response => response.json())
+                .then(data => console.log('Consentimento salvo no servidor:', data))
+                .catch(error => console.error('Erro ao salvar consentimento no servidor:', error));
+        });
+    
+        // Quando o usuário recusa cookies
+        document.getElementById('decline-cookies').addEventListener('click', function () {
+            localStorage.setItem('cookieConsent', 'false'); // Armazena a recusa
+            document.getElementById('cookie-consent-banner').style.display = 'none';
+    
+            // Enviar a recusa ao servidor
+            fetch('/salvar-consentimento', {
+                method: 'POST',
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    consentido: true,
+                    navegador: navigator.userAgent,
+                    url: window.location.href
+                })
+            }).then(response => response.json())
+                .then(data => console.log('Consentimento salvo no servidor:', data))
+                .catch(error => console.error('Erro ao salvar consentimento no servidor:', error));
+        });
+    
+        // Função para iniciar a coleta de dados de navegação
+        function startDataCollection() {
+            const dataToCollect = {
+                url: window.location.href,
+                userAgent: navigator.userAgent,
+                referrer: document.referrer,
+                timeStamp: new Date().toISOString(),
+            };
+    
+            fetch('/coletar-dados', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(dataToCollect),
+            })
+            .then(response => response.json())
+            .then(data => console.log('Dados enviados com sucesso:', data))
+            .catch(error => console.error('Erro ao enviar dados:', error));
+        }
+    
+        // Função para definir um cookie
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+    
+        // Função para obter o valor de um cookie
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+    
+        // Usar cookie do usuário dinamicamente após login
+        let username = localStorage.getItem('username'); // Obtém o nome de usuário armazenado
+        setCookie("username", username, 7);  // Armazena o cookie por 7 dias
+        let login = getCookie("username"); // Obtém o valor do cookie
+        console.log("Usuário logado: " + login);
+    </script>
+    
+</body>
+
+</html>

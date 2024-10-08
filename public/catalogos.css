@@ -1,0 +1,179 @@
+/* Reset básico para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo sofisticado e elegante para a página de catálogos */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #2b2b2b;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header a {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: botaoVoltar 1s ease-in-out;
+}
+
+header a img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+}
+
+header a:hover img {
+    transform: rotate(-20deg) scale(1.1);
+}
+
+@keyframes botaoVoltar {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.catalogos {
+    padding: 40px 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.catalogos h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.catalogos h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #00b894;
+    margin: 10px auto;
+    transition: width 0.5s ease;
+}
+
+.catalogos h2:hover::after {
+    width: 120px;
+}
+
+.catalogos-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.catalogo-item {
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.catalogo-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.catalogo-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 20px;
+}
+
+.catalogo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.catalogo-item:hover img {
+    transform: scale(1.1);
+}
+
+.catalogo-item span {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.catalogo-item:hover span {
+    color: #00b894;
+}
+
+footer {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    margin-top: auto;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.catalogo-item {
+    animation: aparecer 1s ease forwards;
+}
+
+.catalogo-item:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.catalogo-item:nth-child(even) {
+    animation-delay: 0.4s;
+}

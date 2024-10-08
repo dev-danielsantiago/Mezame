@@ -1,0 +1,64 @@
+{
+    "itens": [
+        {
+            "id": "tank1",
+            "nome": "Matadora",
+            "material": "Aço reforçado",
+            "efeito": "Causa 15 de dano. Durabilidade: 100, DB: 10.",
+            "imagem": "/img/itens/matadora.png",
+            "valor": 1000,
+            "descricao": "Uma espada pesada e mortal, ideal para cortar através de armaduras e infligir dano significativo.",
+            "quantidade": 2
+        },
+        {
+            "id": "tank2",
+            "nome": "Kit Tank",
+            "material": "Aço pesado e componentes de alta resistência",
+            "efeito": "Armadura Pesada, Escudo Torre, Espada Longa Europeia. Defesa Máxima e Ataque Assustador.",
+            "imagem": "/img/itens/kitTank.png",
+            "valor": 3500,
+            "descricao": "Um conjunto completo para tanques, oferecendo máxima defesa física e um ataque intimidante. Ideal para absorver dano e proteger aliados.",
+            "quantidade": 1
+        },
+        {
+            "id": "tank3",
+            "nome": "Armadura Básica",
+            "material": "Aço leve",
+            "efeito": "Durabilidade: 50, DB: 10.",
+            "imagem": "/img/itens/armaduraBasica.png",
+            "valor": 500,
+            "descricao": "Uma armadura simples, mas eficaz, proporcionando proteção básica contra ataques físicos.",
+            "quantidade": 4
+        },
+        {
+            "id": "tank4",
+            "nome": "Escudo Espartano (Compacto)",
+            "material": "Aço temperado com bordas reforçadas",
+            "efeito": "Defesa +3, Vida da Armadura: 200, Durabilidade: 33. Efeitos: Urrar (atrai inimigos) e Tática de Batalha (inimigos vulneráveis a ataques de oportunidade).",
+            "imagem": "/img/itens/escudoEspartano.png",
+            "valor": 1600,
+            "descricao": "Um escudo compacto, conhecido por sua capacidade de atrair inimigos e criar oportunidades para ataques estratégicos.",
+            "quantidade": 2
+        },
+        {
+            "id": "tank5",
+            "nome": "Martelo da Resistência",
+            "material": "Aço com runas mágicas de proteção",
+            "efeito": "Concede +2 de resistência a dano físico. Uma vez por dia, pode lançar 'Escudo de Resistência'. Dano: 1d10.",
+            "imagem": "/img/itens/marteloResistencia.png",
+            "valor": 1800,
+            "descricao": "Um martelo maciço que oferece resistência adicional e a habilidade de conjurar uma barreira protetora para aumentar sua defesa.",
+            "quantidade": 1
+        },
+        {
+            "id": "tank6",
+            "nome": "Escudo da Invencibilidade",
+            "material": "Aço encantado com gemas mágicas",
+            "efeito": "Concede +2 de CA enquanto empunhado. Pode lançar 'Invulnerabilidade' por 1 minuto, uma vez por dia. Dano: 1d6.",
+            "imagem": "/img/itens/escudoInvencivel.png",
+            "valor": 2400,
+            "descricao": "Um escudo extremamente poderoso que oferece proteção total durante curtos períodos, tornando seu portador invulnerável.",
+            "quantidade": 1
+        }
+    ]
+}

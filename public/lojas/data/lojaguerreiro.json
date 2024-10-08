@@ -1,0 +1,94 @@
+{
+    "itens": [
+        {
+            "id": "guerreiro1",
+            "nome": "Armadura Mediana",
+            "material": "Aço temperado e couro reforçado",
+            "efeito": "HP: 45, Redutor de movimentação: -1.",
+            "imagem": "/img/itens/armaduraMediana.png",
+            "valor": 500,
+            "descricao": "Uma armadura mediana que oferece boa proteção e resistência, mas reduz ligeiramente a mobilidade do usuário.",
+            "quantidade": 4
+        },
+        {
+            "id": "guerreiro2",
+            "nome": "Armadura com Espaço para Runa",
+            "material": "Aço encantado com espaço para runa",
+            "efeito": "Durabilidade: 100, DB: 15.",
+            "imagem": "/img/itens/armaduraEspacoRuna.png",
+            "valor": 1200,
+            "descricao": "Uma armadura resistente que permite a inserção de runas para personalizar suas propriedades mágicas e defensivas.",
+            "quantidade": 3
+        },
+        {
+            "id": "guerreiro3",
+            "nome": "Espada Reta",
+            "material": "Aço forjado e empunhadura reforçada",
+            "efeito": "Causa 2d8+8 de dano. Força +1. Uma mão.",
+            "imagem": "/img/itens/espadaReta.png",
+            "valor": 800,
+            "descricao": "Uma espada reta clássica, ideal para combate de curto alcance, causando dano perfurante significativo.",
+            "quantidade": 5
+        },
+        {
+            "id": "guerreiro4",
+            "nome": "Centurião Escarlate",
+            "material": "Couro resistente e placas de aço",
+            "efeito": "Defesa +3. Vida da Armadura: 122, Durabilidade: 52.",
+            "imagem": "/img/itens/centuriaoEscarlate.png",
+            "valor": 1400,
+            "descricao": "Uma vestimenta leve que concede resistência física e proteção significativa, com bônus em testes de resistência.",
+            "quantidade": 2
+        },
+        {
+            "id": "guerreiro5",
+            "nome": "Gran'Disha",
+            "material": "Ferro de Dragão",
+            "efeito": "Poder de ataque: 3d6 + 10. Executa ataque giratório atingindo inimigos adjacentes.",
+            "imagem": "/img/itens/grandisha.png",
+            "valor": 2200,
+            "descricao": "Uma espada larga capaz de desferir ataques poderosos em movimentos circulares, atingindo múltiplos inimigos.",
+            "quantidade": 1
+        },
+        {
+            "id": "guerreiro6",
+            "nome": "Machado Solrac",
+            "material": "Material desconhecido, associado ao Sol Negro",
+            "efeito": "Bônus de +1 em ataque e dano. Causa 1d4 de dano necrótico e 1d4 de fogo. Habilidade especial: Banimento para outro plano.",
+            "imagem": "/img/itens/machadoSolrac.png",
+            "valor": 2500,
+            "descricao": "Um grande machado lendário que inflige dano adicional e pode banir inimigos para outro plano em ataques críticos.",
+            "quantidade": 1
+        },
+        {
+            "id": "guerreiro7",
+            "nome": "Espada da Fúria Elemental",
+            "material": "Aço encantado com runas elementais",
+            "efeito": "Causa dano adicional de fogo, gelo ou trovão. Permite lançar 'Bola de Fogo', 'Raio de Gelo' ou 'Relâmpago' uma vez por dia.",
+            "imagem": "/img/itens/espadaFuriaElemental.png",
+            "valor": 1800,
+            "descricao": "Uma espada mágica que canaliza os elementos, infligindo dano adicional e permitindo conjurações poderosas.",
+            "quantidade": 2
+        },
+        {
+            "id": "guerreiro8",
+            "nome": "Martelo do Titã",
+            "material": "Aço pesado e encantamentos de trovão",
+            "efeito": "Causa 1d6 de dano adicional de trovão. Empurra e derruba oponentes em golpes críticos.",
+            "imagem": "/img/itens/marteloTita.png",
+            "valor": 1900,
+            "descricao": "Um martelo massivo que desferi golpes devastadores, criando ondas de choque que empurram e derrubam os inimigos.",
+            "quantidade": 2
+        },
+        {
+            "id": "guerreiro9",
+            "nome": "Lança do Dragão",
+            "material": "Escamas de dragão e aço temperado",
+            "efeito": "Concede +1 de dano adicional de fogo. Permite lançar 'Sopro do Dragão' uma vez por dia.",
+            "imagem": "/img/itens/lancaDragao.png",
+            "valor": 2000,
+            "descricao": "Uma lança mágica adornada com escamas de dragão que inflige dano de fogo e permite conjurar o sopro flamejante do dragão.",
+            "quantidade": 1
+        }
+    ]
+}

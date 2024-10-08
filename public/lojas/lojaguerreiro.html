@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/loja.css"> <!-- Referência para o CSS -->
+    <title>Loja Geral - Porquinho Mágico</title>
+</head>
+<body data-loja="lojaguerreiro">
+    <header>
+        <h1>Loja Guerreiro</h1>
+        <div id="saldoContainer">
+            <h2>Seu Saldo</h2>
+            <div id="saldo">Dracmas: $0.00</div> <!-- Saldo do jogador -->
+        </div>
+    </header>
+
+    <div id="itensContainer">
+        <h2>Itens Disponíveis</h2>
+        <div id="itens"></div> <!-- Os itens da loja serão carregados aqui -->
+    </div>
+    <audio id="somMoeda" src="../audio/moeda.mp3"></audio>
+    <script src="/lojas/loja.js"></script>
+</body>
+</html>

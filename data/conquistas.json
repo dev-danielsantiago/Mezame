@@ -1,0 +1,41 @@
+{
+    "conquistas": [
+        {
+            "id": 0,
+            "nome": "Painel Organizado",
+            "img": "img/conquistas/visorArcano.png",
+            "legenda": "Deixa o seu painel no CrossRoad organizado (Discord)"
+        },
+        {
+            "id": 1,
+            "nome": "Fanfiqueiro",
+            "img": "img/conquistas/fanfic.png",
+            "legenda": "Participe do grupo e crie teorias, mesmo que aparenta ser boba."
+        },
+        {
+            "id": 2,
+            "nome": "Dor da Perda",
+            "img": "img/conquistas/perdar.png",
+            "legenda": "Tenha uma perda muito importante em sessão."
+        },
+        {
+            "id": 3,
+            "nome": "Fanático em Compra",
+            "img": "img/conquistas/comprar.png",
+            "legenda": "Você está sempre à frente! Um comprador compulsivo que não deixa nenhum item escapar."
+        },
+        {
+            "id": 4,
+            "nome": "Preparo",
+            "img": "img/conquistas/preparo.png",
+            "legenda": "Você sempre lembrou de usar runa camada de aura, agora ela é ativada automaticamente."
+        }
+        ,
+        {
+            "id": 4,
+            "nome": "Olho em Tudo!",
+            "img": "img/conquistas/olhoCosmico.png",
+            "legenda": "Usando várias vezes o olhar cósmico e painel, agora seu painel avisa ameaças somente nível 1."
+        }
+    ]
+}

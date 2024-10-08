@@ -1,0 +1,78 @@
+{
+    "jogadores": [
+        {
+            "username": "Hsbiel",
+            "senha": "Genki12345",
+            "saldo": 106764,
+            "imagem": "/uploads/biel.gif",
+            "apostasHoje": 10,
+            "dataUltimaAposta": "Fri Oct 04 2024",
+            "conquistasDesbloqueadas": [0]
+        },
+        {
+            "username": "Viny001",
+            "senha": "748489",
+            "saldo": 13501,
+            "imagem": "/uploads/default.png",
+            "conquistasDesbloqueadas": []
+        },
+        {
+            "username": "Trazcks",
+            "senha": "244466666",
+            "saldo": 22637,
+            "imagem": "/uploads/default.png",
+            "conquistasDesbloqueadas": []
+        },
+        {
+            "username": "Necrolorde",
+            "senha": "777",
+            "saldo": 1000,
+            "imagem": "/uploads/default.png",
+            "conquistasDesbloqueadas": []
+        },
+        {
+            "username": "Cammy",
+            "senha": "5550123",
+            "saldo": 11522,
+            "imagem": "/uploads/default.png",
+            "conquistasDesbloqueadas": []
+        },
+        {
+            "username": "Number",
+            "senha": "number123",
+            "saldo": 103286,
+            "imagem": "/uploads/b921f778-9875-41ed-b6ea-28ac98f2d0a5-.png",
+            "apostasHoje": 7,
+            "dataUltimaAposta": "Sun Oct 06 2024",
+            "conquistasDesbloqueadas": [0, 1]
+        },
+        {
+            "username": "Mestre",
+            "senha": "senhamestre",
+            "saldo": 0,
+            "imagem": "/uploads/default.png",
+            "conquistasDesbloqueadas": []
+        },
+        {
+            "username": "Crossroad",
+            "senha": "123",
+            "saldo": 25600,
+            "imagem": "/uploads/default.png",
+            "conquistasDesbloqueadas": []
+        },
+        {
+            "username": "mestre",
+            "senha": "senhas",
+            "saldo": 0,
+            "imagem": "/uploads/default.png",
+            "conquistasDesbloqueadas": []
+        },
+        {
+            "username": "Reis",
+            "senha": "123A",
+            "saldo": 5541456,
+            "imagem": "/uploads/undefined.jpg",
+            "conquistasDesbloqueadas": []
+        }
+    ]
+}

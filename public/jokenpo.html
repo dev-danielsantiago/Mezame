@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jokenpo.css">
+    <title>Apostas - Porquinho Mágico</title>
+</head>
+
+<body>
+    <header>
+        <h1>Jokenpo</h1>
+        <a href="dashboard.html" class="botão-00">👈Voltar</a>
+    </header>
+
+    <div id="usuario" class="textDiv"></div>
+    <div id="saldo" class="textDiv"></div>
+
+    <div id="game">
+            <!-- Contadores de apostas e multiplicadores -->
+        <div class="info-container">
+            <div id="contadorApostas" class="textDivContador"></div>
+            <div id="multiplicadores" class="textDiv"></div>
+        </div>
+        <img src="img/esperando.jpg" alt="Porco Esperando" id="porcoImg">
+        <h2>Fazer Aposta</h2>
+        <div id="apostaMsg"></div>
+        <label for="valorAposta" class="textLabel">Valor da Aposta (até 10.000 Dracmas):</label>
+        <input type="number" id="valorAposta" name="valorAposta" required max="10000" placeholder="Pode apostar até 10 mil Dracmas">
+
+        <h3>Escolha sua jogada:</h3>
+        <div class="jogada-container">
+            <button class="jogada" data-jogada="pedra">✊ Pedra</button>
+            <button class="jogada" data-jogada="papel">✋ Papel</button>
+            <button class="jogada" data-jogada="tesoura">✌️ Tesoura</button>
+        </div>
+
+        <button id="apostarBtn">Apostar</button>
+    </div>
+
+    <audio id="audioBackground" src="audio/fundo.mp3" loop autoplay></audio>
+
+    <script>
+        const username = localStorage.getItem('username');
+        document.getElementById('usuario').innerText = `Usuário: ${username}`;
+    
+        const porcoImg = document.getElementById('porcoImg');
+    
+        // Função para verificar se é final de semana
+        function isFinalDeSemana() {
+            const hoje = new Date();
+            const diaSemana = hoje.getDay();
+            return diaSemana === 6 || diaSemana === 0; // 6 = Sábado, 0 = Domingo
+        }
+    
+        // Função para atualizar o saldo
+        async function atualizarSaldo() {
+            try {
+                const response = await fetch(`/get-saldo?username=${encodeURIComponent(username)}`);
+                const data = await response.json();
+    
+                if (response.ok && data.saldo !== undefined) {
+                    const saldoAtualizado = parseFloat(data.saldo).toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+                    document.getElementById('saldo').innerText = `Dracmas: ${saldoAtualizado}`;
+                } else {
+                    console.error('Erro ao buscar saldo:', data.message);
+                }
+            } catch (error) {
+                console.error('Erro ao atualizar saldo:', error);
+            }
+        }
+    
+        // Função para buscar apostas restantes
+        async function atualizarApostasRestantes() {
+            try {
+                const response = await fetch(`/get-apostas?username=${encodeURIComponent(username)}`);
+                const data = await response.json();
+    
+                if (response.ok) {
+                    const apostasHoje = data.apostasHoje || 0;
+                    const apostasRestantes = 10 - apostasHoje;
+    
+                    // Atualizar o contador de apostas restantes
+                    document.getElementById('contadorApostas').innerText = `Jogadas: ${apostasRestantes}`;
+                } else {
+                    console.error('Erro ao buscar número de apostas:', data.message);
+                }
+            } catch (error) {
+                console.error('Erro ao atualizar apostas:', error);
+            }
+        }
+    
+        // Função para exibir os multiplicadores
+        async function exibirMultiplicadores() {
+            try {
+                const response = await fetch(`/get-multiplicadores`);
+                const data = await response.json();
+    
+                if (response.ok) {
+                    const multiplicadorGanho = data.multiplicadorGanho;
+                    const multiplicadorPerda = data.multiplicadorPerda;
+    
+                    document.getElementById('multiplicadores').innerHTML = `Ganho:<span class="ganho"> ${multiplicadorGanho}x</span> | Perda: <span class="perda">${multiplicadorPerda}x </span>`;
+                } else {
+                    console.error('Erro ao buscar multiplicadores:', data.message);
+                }
+            } catch (error) {
+                console.error('Erro ao exibir multiplicadores:', error);
+            }
+        }
+    
+        // Chama as funções de atualizar saldo e apostas restantes assim que a página carregar
+        window.onload = function() {
+            atualizarSaldo();
+            atualizarApostasRestantes();
+            exibirMultiplicadores(); // Exibir os multiplicadores ao carregar a página
+        };
+    
+        // Função para verificar se o jogador pode apostar
+        async function podeFazerAposta() {
+            const response = await fetch(`/get-apostas?username=${encodeURIComponent(username)}`);
+            const data = await response.json();
+            
+            if (response.ok) {
+                const apostasHoje = data.apostasHoje || 0; // Número de apostas que o jogador fez hoje
+                return apostasHoje < 10; // Verifica se o jogador pode fazer mais apostas
+            } else {
+                console.error('Erro ao buscar número de apostas:', data.message);
+                return false;
+            }
+        }
+    
+        // Função para determinar o resultado do jogo Jokenpo
+        function calcularResultado(jogadaJogador, jogadaComputador) {
+            if (jogadaJogador === jogadaComputador) {
+                return 'empate';
+            } else if (
+                (jogadaJogador === 'pedra' && jogadaComputador === 'tesoura') ||
+                (jogadaJogador === 'tesoura' && jogadaComputador === 'papel') ||
+                (jogadaJogador === 'papel' && jogadaComputador === 'pedra')
+            ) {
+                return 'ganhou';
+            } else {
+                return 'perdeu';
+            }
+        }
+    
+        // Função para escolher a jogada da máquina com probabilidade de vitória, empate e derrota
+        function escolhaJogadaPorquinho(jogadaJogador) {
+            const probabilidade = Math.random(); // Gera um número aleatório entre 0 e 1
+    
+            if (probabilidade <= 0.33) {                                 
+                // Vitória do jogador (33%)
+                if (jogadaJogador === 'pedra') return 'tesoura';
+                if (jogadaJogador === 'papel') return 'pedra';
+                if (jogadaJogador === 'tesoura') return 'papel';
+            } else if (probabilidade <= 0.66) {
+                // Empate (33%)                                   
+                return jogadaJogador;  
+            } else {                                            
+                // Derrota do jogador (34%) 
+                if (jogadaJogador === 'pedra') return 'papel';
+                if (jogadaJogador === 'papel') return 'tesoura';
+                if (jogadaJogador === 'tesoura') return 'pedra';
+            }
+        }
+    
+// Função para atualizar vitórias e derrotas no JSON
+async function atualizarResultados(username, resultado) {
+    try {
+        // Faz a requisição diretamente para atualizar os resultados
+        const response = await fetch('/update-jokenpo-resultados', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, resultado }) // Envia apenas os dados necessários para o servidor
+        });
+
+        const data = await response.json();
+        
+        if (response.ok) {
+            console.log('Resultados atualizados com sucesso:', data.message);
+        } else {
+            console.error('Erro ao atualizar os resultados:', data.message);
+        }
+    } catch (error) {
+        console.error('Erro ao enviar resultados:', error);
+    }
+}
+
+    
+// Fazer a aposta
+document.getElementById('apostarBtn').addEventListener('click', async () => {
+    const valorAposta = parseFloat(document.getElementById('valorAposta').value);
+    const jogadaButton = document.querySelector('.jogada.selected');
+
+    if (!jogadaButton) {
+        document.getElementById('apostaMsg').innerText = 'Por favor, escolha uma jogada!';
+        return;
+    }
+
+    if (valorAposta <= 0 || valorAposta > 10000) {
+        document.getElementById('apostaMsg').innerText = 'O valor da aposta deve ser entre 1 e 10.000 Dracmas.';
+        return;
+    }
+
+    const jogada = jogadaButton.getAttribute('data-jogada');
+
+    if (!(await podeFazerAposta(username))) {
+        document.getElementById('apostaMsg').innerText = 'Limite de apostas diárias atingido!';
+        return;
+    }
+
+    const multiplicadorGanho = isFinalDeSemana() ? 3.5 : 2.5;
+    const saldoResponse = await fetch(`/get-saldo?username=${encodeURIComponent(username)}`);
+    const saldoData = await saldoResponse.json();
+
+    if (saldoData.saldo < valorAposta) {
+        document.getElementById('apostaMsg').innerText = 'Saldo insuficiente para fazer a aposta.';
+        return;
+    }
+
+    const jogadaComputador = escolhaJogadaPorquinho(jogada);
+    const resultado = calcularResultado(jogada, jogadaComputador);
+
+    let ganho = 0;
+    if (resultado === 'ganhou') {
+        ganho = valorAposta * multiplicadorGanho;
+        ganho = Math.floor(ganho * 100) / 100;
+        porcoImg.src = 'img/perdeu.jpg';
+    } else if (resultado === 'perdeu') {
+        ganho = -valorAposta * 1.5;
+        ganho = Math.floor(ganho * 100) / 100;
+        porcoImg.src = 'img/ganhou.jpg';
+    } else {
+        porcoImg.src = 'img/esperando.jpg';
+    }
+
+    // Atualiza o JSON com vitórias e derrotas
+    await atualizarResultados(username, resultado);
+
+    // Registrar a aposta no servidor
+    try {
+        const apostaResponse = await fetch(`/apostar`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, valorAposta, jogada, jogadaComputador, resultado, ganho })
+        });
+
+        const resultData = await apostaResponse.json();
+        let mensagem = `Você apostou ${valorAposta.toLocaleString('pt-BR', { minimumFractionDigits: 2 })} Dracmas.<br>`;
+        mensagem += `Sua jogada: ${jogada}.<br>`;
+        mensagem += `(Sr. Porquinho): ${jogadaComputador}.<br>`;
+
+        if (resultado === 'ganhou') {
+            mensagem += `<span id="ganhou">Parabéns! Você ganhou ${ganho.toLocaleString('pt-BR', { minimumFractionDigits: 2 })} Dracmas! 🎉</span> <br>`;
+        } else if (resultado === 'perdeu') {
+            mensagem += `<span id="perdeu">Você perdeu ${(-ganho).toLocaleString('pt-BR', { minimumFractionDigits: 2 })} Dracmas</span>. <br> 😔`;
+        } else {
+            mensagem += '<span id="empate">Empate! Ninguém ganhou.</span> <br>';
+        }
+
+        document.getElementById('apostaMsg').innerHTML = mensagem;
+        atualizarSaldo();
+        atualizarApostasRestantes();
+    } catch (error) {
+        console.error('Erro ao registrar a aposta:', error);
+        document.getElementById('apostaMsg').innerText = 'Erro ao processar a aposta. Tente novamente.';
+    }
+});
+
+    
+        const jogadaButtons = document.querySelectorAll('.jogada');
+        jogadaButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                jogadaButtons.forEach(btn => btn.classList.remove('selected'));
+                button.classList.add('selected');
+            });
+        });
+    </script>
+    
+
+</body>
+
+</html>

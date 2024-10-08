@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+a, button {
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-direction: row-reverse;
+    background-color: black;
+    color: #eead2d;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+header h1{
+    font-size: 1.6rem;
+}
+
+.textDiv {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+#game {
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px; /* Largura máxima para telas maiores */
+}
+
+#game h2 {
+    color: #28a745;
+}
+
+.textLabel {
+    font-weight: 300;
+    font-style: italic;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 250px; /* Tamanho do input */
+    margin: 10px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.jogada-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+.jogada {
+    font-size: 20px; /* Tamanho do texto dos botões */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #131212;
+    color: #eead2d;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.jogada:hover {
+    background-color: #E75480;
+}
+
+.selected {
+    background-color: #e65681;
+}
+
+.botão-00{
+    background-color: #E75480;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.info-container{
+    background-color: #131212;
+    box-shadow: 1px 1px 5px #1312122c;
+    font-weight: 500;
+    
+    padding: 12px 0;
+    border-radius: 2px;
+    color: white;    
+}
+
+.textDivContador{
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.ganho{
+    color: #eead2d;
+    text-shadow: 1px 1px  1px black;
+}
+
+.perda{
+    color: #ff195e;
+    text-shadow: 1px 1px  1px black;
+}
+
+#apostarBtn {
+    font-size: 2rem; /* Tamanho do texto do botão */
+    padding: 18px 0px; /* Diminuindo o tamanho do botão */
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#apostarBtn:hover {
+    background-color: #e65681;
+}
+
+
+#apostaMsg {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+}
+
+#senhorPorco {
+    max-width: 250px;
+    margin: 20px auto;
+}
+
+#ganhou{
+    color: #218838;
+    font-weight: 600;
+}
+
+#perdeu{
+    color: red;
+    font-weight: 600;
+}
+
+#empate{
+    color: #eead2d;
+    font-weight: 600;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    #game {
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    input, #apostarBtn, .jogada {
+        width: 100%; /* Faz com que os botões e input ocupem 100% da largura disponível */
+        max-width: 100%; /* Evita que excedam a largura da tela */
+    }
+
+    .jogada {
+        flex: 1; /* Faz com que os botões se expandam igualmente */
+    }
+
+    .textDiv {
+        font-size: 1rem; /* Tamanho do texto menor em telas pequenas */
+    }
+
+    #apostarBtn {
+        padding: 6px 12px; /* Diminuindo o tamanho do botão para dispositivos móveis */
+        font-size: 14px; /* Tamanho do texto do botão menor */
+    }
+}

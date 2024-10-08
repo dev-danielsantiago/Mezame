@@ -1,0 +1,384 @@
+{
+    "itens": [
+        {
+            "id": "geral1",
+            "nome": "Poção Cura Simples",
+            "material": "Lesma sangrenta, olhos de morcego e planta dragon de fogo",
+            "efeito": "Restaura 5 de vitalidade",
+            "imagem": "/img/lojageral/poçãoCura.png",
+            "valor": 100,
+            "descricao": "Uma poção simples que restaura 5 pontos de vitalidade. Atenção: possui toxidade que precisa ser monitorada.",
+            "quantidade": 10
+        },
+        {
+            "id": "geral2",
+            "nome": "Poção Aura Simples",
+            "material": "Ossos de Ethuu, língua do sapo de gelo e planta dragon de gelo",
+            "efeito": "Restaura 5 de aura",
+            "imagem": "/img/lojageral/poçãoAura.jpg",
+            "valor": 120,
+            "descricao": "Esta poção restaura 5 pontos de aura. Possui toxidade, e o uso excessivo pode causar envenenamento.",
+            "quantidade": 8
+        },
+        {
+            "id": "geral3",
+            "nome": "Poção Veneno de Aura Simples",
+            "material": "Sangue de bruxa, língua do bode e ervas do demônio",
+            "efeito": "Envenena a aura, causando perda de 2 pontos de aura.",
+            "imagem": "/img/lojageral/poçãoVeneno.png",
+            "valor": 150,
+            "descricao": "Uma poção perigosa que drena 2 pontos de aura. Útil contra inimigos que dependem de aura.",
+            "quantidade": 5
+        },
+        {
+            "id": "geral4",
+            "nome": "Tocha",
+            "material": "Enxofre misturado com cal",
+            "efeito": "Fornece luz por 1 hora. Pode ser usada como arma improvisada, causando 1 de dano de fogo.",
+            "imagem": "/img/lojageral/tocha.png",
+            "valor": 50,
+            "descricao": "Uma tocha útil que fornece luz em um raio de 20 pés, e pode ser usada como arma.",
+            "quantidade": 15
+        },
+        {
+            "id": "geral5",
+            "nome": "Lanterna",
+            "material": "Aço reforçado e vidro resistente",
+            "efeito": "Queima por 6 horas com óleo, fornecendo luz em um raio de 30 pés.",
+            "imagem": "/img/lojageral/laterna.png",
+            "valor": 200,
+            "descricao": "Uma lanterna resistente que oferece luz por até 6 horas. Ideal para longas viagens noturnas.",
+            "quantidade": 10
+        },
+        {
+            "id": "geral6",
+            "nome": "Kit de Refeição",
+            "material": "Madeira e metal simples",
+            "efeito": "Facilita a preparação de alimentos em viagens.",
+            "imagem": "/img/lojageral/kitRefeição.png",
+            "valor": 80,
+            "descricao": "Um kit básico de refeição para aventureiros, contendo os utensílios essenciais.",
+            "quantidade": 20
+        },
+        {
+            "id": "geral7",
+            "nome": "Ração de Viagem",
+            "material": "Ervas e carnes secas",
+            "efeito": "Consumível, restaura 10 de vitalidade.",
+            "imagem": "/img/lojageral/raçãoViagem.png",
+            "valor": 30,
+            "descricao": "Uma ração de viagem prática que restaura 10 pontos de vitalidade.",
+            "quantidade": 50
+        },
+        {
+            "id": "geral8",
+            "nome": "Pedras de Forja",
+            "material": "Pedras místicas com poder de aprimoramento",
+            "efeito": "Aprimora armas e equipamentos. Bônus variam conforme o nível da pedra.",
+            "imagem": "/img/lojageral/pedraForja.png",
+            "valor": 500,
+            "descricao": "Relíquias antigas que aprimoram equipamentos, conferindo bônus poderosos em armas e armaduras.",
+            "quantidade": 6
+        },
+        {
+            "id": "geral9",
+            "nome": "Anel do Espírito Familiar",
+            "material": "Paládio com fragmentos de espíritos",
+            "efeito": "Permite armazenar e convocar um familiar.",
+            "imagem": "/img/lojageral/anelFamiliar.png",
+            "valor": 3125,
+            "descricao": "Um anel lendário que vincula o usuário a um familiar, permitindo armazenar e convocar criaturas.",
+            "quantidade": 1
+        },
+        {
+            "id": "geral10",
+            "nome": "Traje Tático Personalizado",
+            "material": "Aço, ferro, couro de besta mística, madeira e obsidiana",
+            "efeito": "Aumenta a defesa entre 64 e 300, dependendo da personalização.",
+            "imagem": "/img/lojageral/trajePersonalizado.png",
+            "valor": 8000,
+            "descricao": "Uma armadura única e altamente personalizada, projetada para proteção máxima em combate.",
+            "quantidade": 1
+        },
+        {
+            "id": "geral11",
+            "nome": "Baú",
+            "material": "Madeira robusta com ferragens de aço",
+            "efeito": "Armazena itens e tesouros com segurança. Possui fechadura resistente.",
+            "imagem": "/img/lojageral/bau.png",
+            "valor": 300,
+            "descricao": "Um baú resistente ideal para guardar equipamentos e tesouros de forma segura, com capacidade generosa para armazenamento.",
+            "quantidade": 5
+        },
+        {
+            "id": "geral12",
+            "nome": "Baú de Câmbio do Mercado Negro",
+            "material": "Madeira negra com magia interdimensional",
+            "efeito": "Permite vender itens em troca de ouro, usando uma palavra de comando. Possui espaço interdimensional.",
+            "imagem": "/img/lojageral/bauNegro.png",
+            "valor": 5000,
+            "descricao": "Um baú raro que permite colocar itens à venda em troca de ouro. Utiliza magia interdimensional para expandir seu espaço interno.",
+            "quantidade": 1
+        },
+        {
+            "id": "geral13",
+            "nome": "Kit de Calígrafo",
+            "material": "Madeira fina e tinta especial",
+            "efeito": "Permite escrever pergaminhos e documentos com precisão.",
+            "imagem": "/img/lojageral/kitCaligrafo.png",
+            "valor": 100,
+            "descricao": "Um kit completo para calígrafos, ideal para a criação de pergaminhos mágicos e anotações detalhadas.",
+            "quantidade": 10
+        },
+        {
+            "id": "geral14",
+            "nome": "Pedra de Amolar",
+            "material": "Pedra rúnica encantada",
+            "efeito": "Restaura 3 de durabilidade em armas. Concede +1 de ataque por 13 usos.",
+            "imagem": "/img/lojageral/PedraAmolar.png",
+            "valor": 250,
+            "descricao": "Uma pedra de amolar encantada que pode restaurar durabilidade de armas e melhorar temporariamente seu poder de ataque.",
+            "quantidade": 8
+        },
+        {
+            "id": "geral15",
+            "nome": "Aríete Portátil",
+            "material": "Aço reforçado e madeira pesada",
+            "efeito": "Triplica o ataque contra estruturas como portas e portões.",
+            "imagem": "/img/lojageral/arietePortatil.png",
+            "valor": 750,
+            "descricao": "Um aríete portátil e robusto, ideal para quebrar estruturas com eficácia durante invasões.",
+            "quantidade": 2
+        },
+        {
+            "id": "geral16",
+            "nome": "Saco de Dormir",
+            "material": "Tecido resistente e enchimento térmico",
+            "efeito": "Acelera a recuperação de pontos de vida e aura durante o descanso.",
+            "imagem": "/img/lojageral/sacoDormir.png",
+            "valor": 180,
+            "descricao": "Um saco de dormir confortável que acelera a regeneração de vitalidade e aura durante o repouso em aventuras.",
+            "quantidade": 15
+        },
+        {
+            "id": "geral17",
+            "nome": "Pé de Cabra",
+            "material": "Aço temperado",
+            "efeito": "Ferramenta multifuncional que concede +1 em testes variados.",
+            "imagem": "/img/lojageral/peCabra.png",
+            "valor": 90,
+            "descricao": "Um pé de cabra resistente que serve como uma ferramenta versátil, útil em diversas situações durante aventuras.",
+            "quantidade": 12
+        },
+        {
+            "id": "geral18",
+            "nome": "Luneta",
+            "material": "Vidro de cristal e bronze",
+            "efeito": "Permite visão plena a longas distâncias.",
+            "imagem": "/img/lojageral/luneta.png",
+            "valor": 350,
+            "descricao": "Uma luneta de alta precisão, ideal para observações de longa distância em terrenos inexplorados.",
+            "quantidade": 4
+        },
+        {
+            "id": "geral19",
+            "nome": "Saco para Componentes",
+            "material": "Tecido de couro e runas de expansão",
+            "efeito": "Adiciona 9 slots para componentes e ingredientes.",
+            "imagem": "/img/lojageral/saco.png",
+            "valor": 250,
+            "descricao": "Um saco mágico que expande sua capacidade para armazenar ingredientes e componentes essenciais para conjurações.",
+            "quantidade": 10
+        },
+        {
+            "id": "geral20",
+            "nome": "Caneca",
+            "material": "Aço e porcelana mágica",
+            "efeito": "Resistente a líquidos quentes e frios. Perfeita para viagens longas.",
+            "imagem": "/img/lojageral/caneca.png",
+            "valor": 50,
+            "descricao": "Uma caneca durável que mantém a temperatura de bebidas, ideal para aventureiros que precisam se manter hidratados.",
+            "quantidade": 25
+        },
+        {
+            "id": "geral21",
+            "nome": "Balde",
+            "material": "Madeira de carvalho e ferro reforçado",
+            "efeito": "Ideal para transportar líquidos e outros materiais durante aventuras.",
+            "imagem": "/img/lojageral/balde.png",
+            "valor": 30,
+            "descricao": "Um balde resistente que pode ser usado para carregar água, comida ou outros materiais durante suas jornadas.",
+            "quantidade": 20
+        },
+        {
+            "id": "geral22",
+            "nome": "Bolsa de Componentes",
+            "material": "Couro de cabra e runas de preservação",
+            "efeito": "Bolsa de componentes para fazer criação de itens.",
+            "imagem": "/img/lojageral/componentes.png",
+            "valor": 421.25,
+            "descricao": "Uma bolsa mágica com runas de preservação, aumentando sua capacidade de carregar ingredientes essenciais para magias.",
+            "quantidade": 10
+        },
+        {
+            "id": "geral23",
+            "nome": "Kit de Escalada",
+            "material": "Cordas de seda e ganchos de aço",
+            "efeito": "Concede +2 em testes de escalada.",
+            "imagem": "/img/lojageral/kitEscalada.png",
+            "valor": 150,
+            "descricao": "Um kit completo para escalada, contendo cordas resistentes e ganchos de aço, ideal para terrenos íngremes e montanhas.",
+            "quantidade": 5
+        },
+        {
+            "id": "geral24",
+            "nome": "Sino",
+            "material": "Bronze refinado com aura",
+            "efeito": "Emite um som audível a até 32 metros.",
+            "imagem": "/img/lojageral/sino.png",
+            "valor": 60,
+            "descricao": "Um sino feito de bronze mágico, capaz de emitir um som claro e forte que pode ser ouvido a longas distâncias.",
+            "quantidade": 8
+        },
+        {
+            "id": "geral25",
+            "nome": "Pedras de Forja Nível 1",
+            "material": "Pedra mística com resquícios de mana",
+            "efeito": "Concede +2 de bônus ao aprimorar armas e armaduras.",
+            "imagem": "/img/lojageral/pedraForja.png",
+            "valor": 500,
+            "descricao": "Essas pedras místicas podem aprimorar equipamentos, conferindo um bônus de +2 ao item aprimorado.",
+            "quantidade": 12
+        },
+        {
+            "id": "geral26",
+            "nome": "Pedras de Forja Nível 2",
+            "material": "Pedra mística com mana refinada",
+            "efeito": "Concede +4 de bônus ao aprimorar armas e armaduras.",
+            "imagem": "/img/lojageral/pedraForja.png",
+            "valor": 800,
+            "descricao": "Essas pedras podem aprimorar equipamentos, conferindo um bônus de +4 ao item aprimorado. Utilizada por Mestres Artesãos.",
+            "quantidade": 8
+        },
+        {
+            "id": "geral27",
+            "nome": "Grande Espada do Império",
+            "material": "Aço imperial e ouro gravado",
+            "efeito": "Aumenta o ataque corpo a corpo em até 45%, dependendo do nível.",
+            "imagem": "/img/lojageral/espada.png",
+            "valor": 1100,
+            "descricao": "Uma espada imponente forjada com os símbolos do império, conferindo bônus massivos de ataque corpo a corpo.",
+            "quantidade": 2
+        },
+        {
+            "id": "geral28",
+            "nome": "Arco da Floresta Eterna",
+            "material": "Madeira encantada e fibras mágicas",
+            "efeito": "Aumenta a velocidade de ataque com arco em até 45%, dependendo do nível.",
+            "imagem": "/img/lojageral/arcoFloresta.png",
+            "valor": 1100,
+            "descricao": "Um arco elegante e místico que concede bônus de velocidade de ataque para arqueiros proficientes.",
+            "quantidade": 2
+        },
+        {
+            "id": "geral29",
+            "nome": "Cajado das Terras Congeladas",
+            "material": "Carvalho encantado e runas geladas",
+            "efeito": "Aumenta o poder mágico em até 45%, dependendo do nível.",
+            "imagem": "/img/lojageral/cajadoGelo.png",
+            "valor": 1100,
+            "descricao": "Um cajado poderoso que aumenta a capacidade de lançar feitiços de gelo e magia arcana com maior eficácia.",
+            "quantidade": 1
+        },
+        {
+            "id": "geral30",
+            "nome": "Armadura do Reino",
+            "material": "Aço temperado e magia de proteção",
+            "efeito": "Aumenta a defesa em até 45%, dependendo do nível.",
+            "imagem": "/img/lojageral/armaduraReino.png",
+            "valor": 1100,
+            "descricao": "Uma armadura nobre, adornada com o emblema do reino. Oferece defesa robusta e proteção mágica.",
+            "quantidade": 1
+        },
+        {
+            "id": "geral31",
+            "nome": "Coroa de Duendes",
+            "material": "Ouro e joias místicas",
+            "efeito": "Aumenta o ganho de ouro em invasões, até 12%.",
+            "imagem": "/img/lojageral/coroaDuendes.png",
+            "valor": 111200.90,
+            "descricao": "Uma coroa lendária, forjada pelos duendes, que aumenta o ganho de ouro durante invasões bem-sucedidas.",
+            "quantidade": 1
+        },
+        {
+            "id": "geral32",
+            "nome": "Chifre da Guarda",
+            "material": "Chifre lendário e gemas de proteção",
+            "efeito": "Aumenta a XP do castelo e distribui XP adicional para membros da guilda.",
+            "imagem": "/img/lojageral/chifreGuarda.png",
+            "valor": 1300,
+            "descricao": "Um chifre lendário que aumenta a experiência do castelo e concede bônus de XP para defensores.",
+            "quantidade": 1
+        },
+        {
+            "id": "geral34",
+            "nome": "Espátula Dourada",
+            "material": "Ouro mágico e metais desconhecidos",
+            "efeito": "Aumenta atributos ofensivos e defensivos, além de conceder habilidades especiais.",
+            "imagem": "/img/lojageral/espatulaDourada.png",
+            "valor": 197487.99,
+            "descricao": "Uma espátula lendária que concede poderes extraordinários em combate e sobrevivência, ideal para aventureiros versáteis.",
+            "quantidade": 1
+        },
+        {
+            "id": "geral35",
+            "nome": "Caneta Tinteiro",
+            "material": "Aço inoxidável com pena de ganso",
+            "efeito": "Permite escrita precisa e de alta qualidade em pergaminhos e papéis.",
+            "imagem": "/img/lojageral/canetaTinteiro.png",
+            "valor": 3.0,
+            "descricao": "Uma caneta elegante e durável, perfeita para escrever documentos importantes e anotações detalhadas. Essencial para qualquer aventureiro ou estudioso.",
+            "quantidade": 1
+        },
+        {
+            "id": "geral36",
+            "nome": "Pergaminho",
+            "material": "Pele de cabra tratada com óleos naturais",
+            "efeito": "Usado para registrar informações ou criar feitiços.",
+            "imagem": "/img/lojageral/pergaminho.png",
+            "valor": 8.0,
+            "descricao": "Três folhas de pergaminho de alta qualidade, ideais para escrever magias ou registrar informações essenciais. Muito utilizado por magos e estudiosos.",
+            "quantidade": 3
+        },
+        {
+            "id": "geral37",
+            "nome": "Abatedora",
+            "material": "Aço temperado e couro reforçado",
+            "efeito": "Causa dano cortante e drena vitalidade do inimigo ao contato.",
+            "imagem": "/img/lojageral/abatedora.png",
+            "valor": 450.75,
+            "descricao": "Uma foice poderosa e mortal, ideal para combate em massa. Cada golpe inflige dano e restaura a vitalidade do portador, tornando-o uma força difícil de ser abatida.",
+            "quantidade": 1
+        },
+        {
+            "id": "geral38",
+            "nome": "Óleo",
+            "material": "Mistura de óleos inflamáveis e extratos vegetais",
+            "efeito": "Pode ser usado como combustível ou aplicado em superfícies para aumentar o potencial de queimaduras.",
+            "imagem": "/img/lojageral/oleo.png",
+            "valor": 5.0,
+            "descricao": "Um frasco de óleo inflamável, útil para alimentar lanternas ou provocar incêndios. Essencial para exploradores e aventureiros que precisam de uma fonte de luz confiável ou desejam criar armadilhas flamejantes.",
+            "quantidade": 1000
+        },
+        {
+            "id": "geral39",
+            "nome": "Tinta da Pergaminho",
+            "material": "Pigmentos naturais e extratos vegetais",
+            "efeito": "Utilizada para escrever em pergaminhos e papiros, ideal para caligrafia e encantamentos antigos.",
+            "imagem": "/img/lojageral/tintaPergaminho.png",
+            "valor": 3.5,
+            "descricao": "Um pequeno frasco de tinta preta, feita para caligrafia e escritas detalhadas. A tinta é resistente ao tempo e adequada para inscrever encantamentos em pergaminhos e papiros.",
+            "quantidade": 1
+        }
+    ]
+}

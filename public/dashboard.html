@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="img/porquinho (1).png" type="image/x-icon">
+
+    <title>Dashboard - Porquinho Mágico</title>
+</head>
+
+<body>
+    <header>
+        <h1>Mezame</h1>
+        <ul> <!-- O menu começará escondido até o botão ser clicado -->
+
+        </ul>
+
+        <div class="notifications">
+            <span id="notification-bell"><img src="img/notificacao.png" alt="" style="width: 28px;"></span>
+            <span id="notification-count" class="notification-count">0</span>
+        </div>
+    
+    
+    </header>
+    <div id="notifications-dropdown" class="notifications-dropdown">
+        <h3>Notificações</h3>
+        <ul id="notifications-list">
+            <!-- Lista de notificações será gerada aqui -->
+        </ul>
+        <button id="clear-notifications">Limpar todas as notificações</button>
+    </div>
+    <audio id="meuSom" src="audio/somMagico.mp3"></audio>
+
+
+
+
+    <div class="menu">
+
+        <div class="aperte luz"></div>
+
+
+        <ul>
+            <li style="--i:1;">
+                <a href="inventario.html">
+                    <img src="img/backpack.png" alt="">
+                </a>
+            </li>
+
+            <li style="--i:2;">
+                <a href="catalogos.html">
+                    <img src="img/comercio-eletronico.png" alt="">
+                </a>
+            </li>
+
+            <li style="--i:3;">
+                <a href="rank.html">
+                    <img src="img/rank.png" alt="">
+                </a>
+            </li>
+
+            <li style="--i:4;">
+                <a href="presente.html">
+                    <img src="img/present.png" alt="">
+                </a>
+            </li>
+            <li style="--i:5;">
+                <a href="conquista.html">
+                    <img src="img/conquista.png" alt="">
+                </a>
+            </li>
+        </ul>
+    
+    </div>
+
+
+    <div id="usuario"></div>
+    <!-- Contêiner para imagem e spinner -->
+    <div class="imagem-circular-container">
+        <!-- Imagem que será exibida depois do upload, com estilo circular -->
+        <img id="imagemConta" alt="Conta Poupança" class="imagem-circular">
+        <!-- Spinner de carregamento que aparecerá durante o upload -->
+        <div id="uploadSpinner" class="spinner" style="display: none;"></div>
+    </div>
+
+    <div class="perfil">
+        <!-- Botão personalizado para upload de imagem -->
+        <label class="custom-upload" for="imagemUpload">Escolher Arquivo</label>
+
+        <input type="file" id="imagemUpload" accept="image/*" style="display: none;">
+    </div>
+
+
+
+
+    <div id="saldoContainer">
+        <div id="saldo"></div>
+    </div>
+    <div id="transferMsg" class="error"></div>
+
+    <h2>Transferir Dinheiro</h2>
+
+    <form id="transferForm">
+        <label for="destinatario">Destinatário:</label>
+        <select id="destinatario" name="destinatario" required>
+            <!-- Jogadores serão carregados aqui -->
+        </select>
+
+        <label for="valor">Valor:</label>
+        <input type="number" id="valor" name="valor" required>
+        <button type="submit">Transferir</button>
+    </form>
+    <audio id="backgroundMusic" src="audio/backgroundMusic.mp3" loop autoplay></audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const livroMagico = document.getElementsByClassName('menu')[0];
+            const meuSom = document.getElementById('meuSom');
+            const username = localStorage.getItem('username');
+            const saldoElement = document.getElementById('saldo');
+            const notificationList = document.getElementById('notifications-list');
+            const notificationCount = document.getElementById('notification-count');
+            const bell = document.getElementById('notification-bell');
+            const dropdown = document.getElementById('notifications-dropdown');
+            const destinatarioSelect = document.getElementById('destinatario');
+            const transferForm = document.getElementById('transferForm');
+            const transferMsg = document.getElementById('transferMsg');
+            const imagemConta = document.getElementById('imagemConta');
+            const imagemUpload = document.getElementById('imagemUpload');
+            const spinner = document.getElementById('uploadSpinner');
+            const aperte = document.querySelector('.aperte');
+            const menu = document.querySelector('.menu ul');
+    
+            if (!username) {
+                console.error('Usuário não encontrado no localStorage.');
+                alert('Usuário não encontrado. Faça login novamente.');
+                window.location.href = '/';
+                return;
+            }
+    
+            // Mostrar nome do usuário
+            const usuarioElement = document.getElementById('usuario');
+            if (usuarioElement) {
+                usuarioElement.innerHTML = `Bem-vindo, ${username}!`;
+            }
+    
+            // Tocar som ao clicar no livro mágico
+            if (livroMagico) {
+                livroMagico.onclick = function () {
+                    meuSom?.play();
+                };
+            }
+    
+            // Função para atualizar o saldo do jogador
+            async function atualizarSaldo() {
+                try {
+                    const response = await fetch(`/get-saldo?username=${encodeURIComponent(username)}`);
+                    const data = await response.json();
+    
+                    if (data.saldo !== undefined && saldoElement) {
+                        const saldoAtualizado = parseFloat(data.saldo).toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+                        saldoElement.innerText = `Dracmas: $ ${saldoAtualizado}`;
+                    } else {
+                        console.error('Erro ao buscar saldo atualizado:', data.message);
+                    }
+                } catch (error) {
+                    console.error('Erro ao atualizar saldo:', error);
+                }
+            }
+    
+            // Mostrar saldo formatado ao carregar a página
+            atualizarSaldo();
+    
+            // Função para carregar notificações do backend
+            async function carregarNotificacoes() {
+                try {
+                    const response = await fetch(`/get-notificacoes?username=${encodeURIComponent(username)}`);
+                    const notificacoes = await response.json();
+    
+                    if (notificationList && notificationCount) {
+                        notificationList.innerHTML = ''; // Limpar lista de notificações anteriores
+    
+                        if (notificacoes.length > 0) {
+                            notificacoes.forEach(notificacao => {
+                                const li = document.createElement('li');
+                                const mensagem = `Presente de ${notificacao.remetente}: Caixa ${notificacao.tipoCaixa}, Item: ${notificacao.item}`;
+                                li.innerText = mensagem;
+                                notificationList.appendChild(li);
+                            });
+    
+                            notificationCount.innerText = notificacoes.length;
+                        } else {
+                            notificationList.innerHTML = '<li>Nenhuma notificação</li>';
+                            notificationCount.innerText = '0';
+                        }
+                    }
+                } catch (error) {
+                    console.error('Erro ao carregar notificações:', error);
+                }
+            }
+    
+            // Mostrar lista de notificações ao clicar no sininho
+            bell?.addEventListener('click', () => {
+                dropdown?.classList.toggle('visible');
+            });
+    
+            // Fecha o dropdown ao clicar fora dele
+            document.addEventListener('click', function (event) {
+                const isClickInside = bell?.contains(event.target) || dropdown?.contains(event.target);
+                if (!isClickInside) {
+                    dropdown?.classList.remove('visible');
+                }
+            });
+    
+            // Função para limpar todas as notificações do usuário
+            async function limparNotificacoes() {
+                try {
+                    const response = await fetch(`/limpar-notificacoes?username=${encodeURIComponent(username)}`, {
+                        method: 'DELETE'
+                    });
+    
+                    if (response.ok && notificationList && notificationCount) {
+                        notificationList.innerHTML = '<li>Nenhuma notificação</li>';
+                        notificationCount.innerText = '0';
+                    } else {
+                        console.error('Erro ao limpar notificações:', await response.text());
+                    }
+                } catch (error) {
+                    console.error('Erro ao limpar notificações:', error);
+                }
+            }
+    
+            // Chama a função para limpar todas as notificações ao clicar no botão
+            document.getElementById('clear-notifications')?.addEventListener('click', limparNotificacoes);
+    
+            // Chama a função para carregar as notificações quando a página carregar
+            carregarNotificacoes();
+    
+            // Carregar lista de jogadores
+            async function carregarJogadores() {
+                try {
+                    const response = await fetch('/get-players');
+                    const jogadores = await response.json();
+    
+                    if (jogadores.players && jogadores.players.length > 0 && destinatarioSelect) {
+                        destinatarioSelect.innerHTML = ''; // Limpa opções existentes
+                        jogadores.players.forEach(jogador => {
+                            const option = document.createElement('option');
+                            option.value = jogador.username;
+                            option.textContent = jogador.username;
+                            destinatarioSelect.appendChild(option);
+                        });
+                    } else if (destinatarioSelect) {
+                        destinatarioSelect.innerHTML = '<option disabled>Nenhum jogador disponível</option>';
+                    }
+                } catch (error) {
+                    console.error('Erro ao carregar jogadores:', error);
+                    if (destinatarioSelect) {
+                        destinatarioSelect.innerHTML = '<option disabled>Erro ao carregar jogadores</option>';
+                    }
+                }
+            }
+    
+            // Carregar jogadores ao carregar a página
+            carregarJogadores();
+    
+            // Realizar transferência
+            transferForm?.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                const destinatario = destinatarioSelect?.value;
+                const valor = document.getElementById('valor')?.value;
+    
+                try {
+                    const response = await fetch('/transfer', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ destinatario, valor, username })
+                    });
+    
+                    const result = await response.json();
+                    if (transferMsg) {
+                        transferMsg.innerText = result.message;
+    
+                        if (response.ok) {
+                            transferMsg.className = 'success';
+                            await atualizarSaldo();
+                            await carregarNotificacoes();
+                        } else {
+                            transferMsg.className = 'error';
+                        }
+                    }
+                } catch (error) {
+                    console.error('Erro ao realizar transferência:', error);
+                }
+            });
+    
+            // IMG
+            // Função para carregar a imagem do jogador quando a página é carregada
+            fetch(`/get-imagem?username=${encodeURIComponent(username)}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.imagePath && imagemConta) {
+                        imagemConta.src = data.imagePath;
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar a imagem:', error);
+                });
+    
+            // Mostra a pré-visualização da imagem e faz o upload
+            imagemUpload?.addEventListener('change', function (event) {
+                const reader = new FileReader();
+    
+                reader.onload = function () {
+                    if (imagemConta) {
+                        imagemConta.src = reader.result;
+                    }
+                };
+    
+                reader.readAsDataURL(event.target.files[0]);
+            });
+    
+            // Realiza o upload da imagem quando um arquivo é selecionado
+            imagemUpload?.addEventListener('change', function (event) {
+                const formData = new FormData();
+                formData.append('imagem', event.target.files[0]);
+                formData.append('username', username);
+    
+                if (spinner) spinner.style.display = 'block';
+    
+                fetch('/upload-imagem', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.imagePath && imagemConta) {
+                            imagemConta.src = data.imagePath;
+                        } else {
+                            console.error('Erro no upload:', data.message);
+                        }
+                        if (spinner) spinner.style.display = 'none';
+                    })
+                    .catch(error => {
+                        console.error('Erro ao enviar a imagem:', error);
+                        if (spinner) spinner.style.display = 'none';
+                    });
+            });
+    
+            const music = document.getElementById('backgroundMusic');
+            if (music) music.volume = 0.15;
+    
+            // Adicionar evento de clique ao botão "aperte"
+            aperte?.addEventListener('click', function () {
+                menu?.classList.toggle('active');
+                if (menu?.classList.contains('active')) {
+                    updateScrollIndicators();
+                    scrollIndicatorTop.style.display = 'block';
+                    scrollIndicatorBottom.style.display = 'block';
+                } else {
+                    scrollIndicatorTop.style.display = 'none';
+                    scrollIndicatorBottom.style.display = 'none';
+                }
+            });
+    
+            const scrollIndicatorTop = document.createElement('div');
+            const scrollIndicatorBottom = document.createElement('div');
+    
+            // Configura as setas indicadoras de rolagem
+            scrollIndicatorTop.className = 'scroll-indicator-top';
+            scrollIndicatorTop.innerHTML = '↑';
+            scrollIndicatorBottom.className = 'scroll-indicator-bottom';
+            scrollIndicatorBottom.innerHTML = '↓';
+    
+            document.body.appendChild(scrollIndicatorTop);
+            document.body.appendChild(scrollIndicatorBottom);
+    
+            // Função para atualizar a visibilidade dos indicadores de rolagem
+            function updateScrollIndicators() {
+                const maxScrollTop = menu.scrollHeight - menu.clientHeight;
+    
+                if (menu.scrollTop > 0) {
+                    scrollIndicatorTop.style.display = 'block';
+                } else {
+                    scrollIndicatorTop.style.display = 'none';
+                }
+    
+                if (menu.scrollTop < maxScrollTop) {
+                    scrollIndicatorBottom.style.display = 'block';
+                } else {
+                    scrollIndicatorBottom.style.display = 'none';
+                }
+            }
+        });
+    </script>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

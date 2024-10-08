@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conquistas dos Jogadores</title>
+    <link rel="stylesheet" href="conquistas.css"> <!-- Arquivo CSS para o estilo -->
+</head>
+<body>
+    <header>
+        <h1>Conquistas</h1>
+    </header>
+
+    <div id="conquistas-grid"></div> <!-- Grade para exibir as conquistas -->
+
+    <script>
+     document.addEventListener('DOMContentLoaded', async () => {
+        const conquistasGrid = document.getElementById('conquistas-grid');
+        const username = localStorage.getItem('username'); // Nome do jogador armazenado
+
+        if (!username) {
+            alert('Erro: Usuário não encontrado.');
+            return;
+        }
+
+        try {
+            // Busca todas as conquistas disponíveis
+            const responseConquistas = await fetch('/conquistas');
+            const dataConquistas = await responseConquistas.json();
+
+            // Busca as conquistas do jogador logado
+            const responseJogador = await fetch(`/get-jogador/${username}`);
+            const jogador = await responseJogador.json();
+
+            const conquistasDesbloqueadasIds = jogador.conquistasDesbloqueadas || [];
+
+            let conquistasDesbloqueadasCount = 0;
+            let conquistasTotal = dataConquistas.conquistas.length;
+
+            // Exibe todas as conquistas, desbloqueadas e bloqueadas
+            dataConquistas.conquistas.forEach(conquista => {
+                const card = document.createElement('div');
+                card.classList.add('conquista-card');
+
+                const desbloqueada = conquistasDesbloqueadasIds.includes(conquista.id);
+
+                if (desbloqueada) {
+                    conquistasDesbloqueadasCount++;
+                } else {
+                    card.classList.add('bloqueada'); // Aplica estilo bloqueado se não for desbloqueada
+                }
+
+                card.innerHTML = `
+                    <img src="${conquista.img}" alt="${conquista.nome}" class="conquista-img">
+                    <h3>${conquista.nome}</h3>
+                    <p>${conquista.legenda}</p>
+                `;
+
+                conquistasGrid.appendChild(card);
+            });
+
+            // Atualiza o contador de conquistas
+            const contadorConquistas = document.createElement('div');
+            contadorConquistas.innerHTML = `
+                <p>Conquistas desbloqueadas: ${conquistasDesbloqueadasCount} de ${conquistasTotal}</p>
+                <p>Faltam ${conquistasTotal - conquistasDesbloqueadasCount} conquistas para desbloquear.</p>
+            `;
+            document.body.insertBefore(contadorConquistas, conquistasGrid);
+
+        } catch (error) {
+            console.error('Erro ao carregar as conquistas:', error);
+        }
+    });
+    </script>
+    
+</body>
+</html>

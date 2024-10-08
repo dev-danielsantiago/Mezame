@@ -1,0 +1,134 @@
+{
+    "itens": [
+        {
+            "id": "cacador1",
+            "nome": "Água Benta",
+            "material": "Água sagrada e bênção de clérigos",
+            "efeito": "Banhar armas com propriedades sagradas, tornando-as mais eficazes contra seres malignos.",
+            "imagem": "/img/itens/aguaBenta.png",
+            "valor": 150,
+            "descricao": "A Água Benta confere às armas banhadas um bônus sagrado, infligindo 2d6 de dano adicional contra criaturas malignas. Durabilidade: 100, DB: 15.",
+            "quantidade": 10
+        },
+        {
+            "id": "cacador2",
+            "nome": "Grimório de Quimeras",
+            "material": "Páginas de pergaminho encantado e tinta de kraken",
+            "efeito": "Oferece conhecimento estratégico sobre criaturas mágicas e sobrenaturais.",
+            "imagem": "/img/itens/grimorioQuimeras.png",
+            "valor": 800,
+            "descricao": "Este grimório contém informações valiosas sobre fraquezas e táticas contra criaturas sobrenaturais, concedendo vantagens estratégicas ao enfrentá-las.",
+            "quantidade": 3
+        },
+        {
+            "id": "cacador3",
+            "nome": "Armadilha de Caça",
+            "material": "Aço reforçado e dentes serrilhados",
+            "efeito": "Causa 20 de dano e pode prender criaturas. DB: 12.",
+            "imagem": "/img/itens/armadilhaCaca.png",
+            "valor": 350,
+            "descricao": "Uma armadilha robusta usada para capturar presas. Causa 20 de dano ao ativar e possui durabilidade de 112.",
+            "quantidade": 5
+        },
+        {
+            "id": "cacador4",
+            "nome": "Farda de Caçador (Comum)",
+            "material": "Couro leve e tecido de resistência",
+            "efeito": "Concede +1 de Destreza e bônus de +2 em testes de esquiva. Vida da Armadura: 120, Durabilidade: 22.",
+            "imagem": "/img/itens/fardaCacador.png",
+            "valor": 600,
+            "descricao": "Uma vestimenta leve e resistente, ideal para caçadores que precisam de agilidade e proteção em suas missões.",
+            "quantidade": 8
+        },
+        {
+            "id": "cacador5",
+            "nome": "Chicote Matador de Vampiros",
+            "material": "Aço encantado e couro infernal",
+            "efeito": "Causa 3d12 + Destreza de dano. Dano crítico contra seres sobrenaturais.",
+            "imagem": "/img/itens/chicoteVampiros.png",
+            "valor": 2000,
+            "descricao": "Este chicote é uma arma exótica usada para caçar vampiros e outras criaturas da noite. Causa dano crítico automático contra esses seres e possui várias runas de poder.",
+            "quantidade": 1
+        },
+        {
+            "id": "cacador6",
+            "nome": "Medalhão de Fhoer",
+            "material": "Prata encantada",
+            "efeito": "Detecta magia, maldições e espreita de monstros mágicos.",
+            "imagem": "/img/itens/medalhaoFhoer.png",
+            "valor": 500,
+            "descricao": "Este medalhão vibra na presença de magia e criaturas mágicas, alertando o usuário sobre perigos sobrenaturais.",
+            "quantidade": 5
+        },
+        {
+            "id": "cacador7",
+            "nome": "Kit de Mutagênico Fhoer",
+            "material": "Frascos de cristal e substâncias alquímicas",
+            "efeito": "Cada frasco concede +3 em um atributo físico. Pode ser usado um de cada vez.",
+            "imagem": "/img/itens/kitMutagenico.png",
+            "valor": 1500,
+            "descricao": "Um kit especializado contendo mutagênicos que aprimoram atributos físicos e mentais, sendo utilizado estrategicamente por caçadores.",
+            "quantidade": 2
+        },
+        {
+            "id": "cacador8",
+            "nome": "Armas de Fhoer",
+            "material": "Liga de Fhoerita e aço encantado",
+            "efeito": "A arma pode ser atraída de volta ao caçador e se regenera lentamente quando danificada.",
+            "imagem": "/img/itens/armasFhoer.png",
+            "valor": 2200,
+            "descricao": "As armas feitas de Fhoerita têm propriedades regenerativas e sacras, sendo leais ao caçador que as empunha.",
+            "quantidade": 3
+        },
+        {
+            "id": "cacador9",
+            "nome": "Arco da Presa Fugaz",
+            "material": "Madeira élfica encantada",
+            "efeito": "Aumenta o dano em +1d6 de veneno. Permite usar 'Passos Sem Pegadas' uma vez por dia.",
+            "imagem": "/img/itens/arcoPresaFugaz.png",
+            "valor": 1800,
+            "descricao": "Um arco mágico que inflige dano venenoso e concede habilidades furtivas ao caçador.",
+            "quantidade": 1
+        },
+        {
+            "id": "cacador10",
+            "nome": "Besta do Predador da Noite",
+            "material": "Metal negro e runas sombrias",
+            "efeito": "Causa dano necrótico adicional. Permite usar 'Visão No Escuro' uma vez por dia.",
+            "imagem": "/img/itens/bestaPredadorNoite.png",
+            "valor": 2000,
+            "descricao": "Uma besta poderosa que drena a vida dos alvos e concede visão noturna ao caçador.",
+            "quantidade": 1
+        },
+        {
+            "id": "cacador11",
+            "nome": "Adaga do Caçador da Lua",
+            "material": "Prata lunar e símbolos encantados",
+            "efeito": "Concede +2 de ataque à noite. Permite usar 'Raio Lunar' uma vez por dia.",
+            "imagem": "/img/itens/adagaCacadorLua.png",
+            "valor": 1500,
+            "descricao": "Uma adaga mágica que brilha sob a luz da lua, causando dano extra à noite e permitindo conjurar magias lunares.",
+            "quantidade": 2
+        },
+        {
+            "id": "cacador12",
+            "nome": "Espada do Predador",
+            "material": "Aço encantado e empunhadura em forma de garra",
+            "efeito": "Concede +2 de ataque contra criaturas selvagens. Pode lançar 'Marca do Caçador' uma vez por dia.",
+            "imagem": "/img/itens/espadaPredador.png",
+            "valor": 1800,
+            "descricao": "Uma espada mágica que aumenta a eficácia contra criaturas selvagens e permite marcar presas para ataques mais precisos.",
+            "quantidade": 1
+        },
+        {
+            "id": "cacador13",
+            "nome": "Manto da Floresta Viva",
+            "material": "Folhas e galhos encantados",
+            "efeito": "Resistência a veneno e fogo. Concede camuflagem e permite lançar 'Invisibilidade' uma vez por dia.",
+            "imagem": "/img/itens/mantoFlorestaViva.png",
+            "valor": 2000,
+            "descricao": "Um manto mágico que se regenera e proporciona camuflagem, além de conceder resistência a veneno e fogo.",
+            "quantidade": 2
+        }
+    ]
+}

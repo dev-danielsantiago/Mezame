@@ -1,0 +1,54 @@
+{
+  "jogadores": [
+    {
+      "username": "Hsbiel",
+      "vitorias": 0,
+      "derrotas": 0
+    },
+    {
+      "username": "Viny001",
+      "vitorias": 0,
+      "derrotas": 0
+    },
+    {
+      "username": "Trazcks",
+      "vitorias": 0,
+      "derrotas": 0
+    },
+    {
+      "username": "Necrolorde",
+      "vitorias": 0,
+      "derrotas": 0
+    },
+    {
+      "username": "Cammy",
+      "vitorias": 0,
+      "derrotas": 0
+    },
+    {
+      "username": "Number",
+      "vitorias": 4,
+      "derrotas": 2
+    },
+    {
+      "username": "Mestre",
+      "vitorias": 0,
+      "derrotas": 0
+    },
+    {
+      "username": "Crossroad",
+      "vitorias": 0,
+      "derrotas": 0
+    },
+    {
+      "username": "mestre",
+      "vitorias": 0,
+      "derrotas": 0
+    },
+    {
+      "username": "Reis",
+      "vitorias": 0,
+      "derrotas": 0
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "itens": [
+    {
+      "id": "samurai1",
+      "nome": "Katana Comumm",
+      "material": "Ferro + Componentes,<br>Corpo a Corpo, Comum.<br> Samurai nível 1",
+      "efeito": "",
+      "imagem": "/img/lojaSamurai/katanaComum.png",
+      "valor": 242,
+      "descricao": "Uma arma simples e eficiente, amplamente usada por guerreiros iniciantes em combates rápidos.<br> <strong>Dano:</strong> 20 + 1d4 (corte), <strong>Durabilidade:</strong> 2s.",
+      "quantidade": 0
+    },
+    {
+      "id": "samurai2",
+      "nome": "Katana Incomum",
+      "material": "Aço + Componentes² + Ferreiro²<br> Corpo a Corpo, Incomum<br> Samurai nível 2",
+      "efeito": "",
+      "imagem": "/img/lojaSamurai/katanaIncomum.png",
+      "valor": 670,
+      "descricao": "Uma arma poderosa com espaço para uma runa, ideal para guerreiros que buscam personalizar suas armas com encantamentos.<br><strong>Dano:</strong> 30 + 1d12 (corte), <strong>Durabilidade:</strong> 2s",
+      "quantidade": 7
+    },
+    {
+      "id": "samurai3",
+      "nome": "Katanas Fukku Yugure",
+      "material": "Aço lunar<br>Corpo a Corpo, Incomum.<br> Samurai nível 3",
+      "efeito": "<br>Escolhe um estilo podendo trocar em batalha -<br> <strong>Tsuki</strong>:<br> +1 em iniciativa e em acertos (custo: 5mn). <br><strong>Yoru encantamentos - Nova Lua:</strong><br> +1 esquiva e acerto (custo: 5mn)<br> Crescente: 5HpD (custo: 5mn),<br> <strong>Mangetsu:</strong><br> Enfraquece aura do alvo /1.2; <strong>Passiva Lua Cheia:</strong><br> Dobra o dano dela em lua cheia.",
+      "imagem": "/img/lojaSamurai/katanaFukku.jpg",
+      "valor": 2725,
+      "descricao": "As Fukku Jemini no Yūgure são forjadas com oricalco refinado e imbuídas com o poder místico da Noite e da Lua. Essas katanas possuem habilidades especiais que se manifestam de acordo com as fases da lua e o domínio sobre a escuridão.<br> <strong>Dano:</strong> 50 + 1d20 (corte). <strong>Durabilidade:</strong> 5s",
+      "quantidade": 4
+    },
+    {
+      "id": "samurai4",
+      "nome": "Katana do Vento Cortante",
+      "material": "Aço encantado pelos ventos<br> Corpo a Corpo, Raro<br> Samurai nível 4",
+      "efeito": "<strong>Habilidade Especial:</strong><br> 'Lufada de Vento' cria uma rajada de 10 metros (5 grid) que empurra inimigos e dispersa gases e vapores, além de apagar chamas (teste Classe + Destreza).",
+      "imagem": "/img/lojaSamurai/katanaVentoCortante.jpg",
+      "valor": 2459,
+      "descricao": "Esta katana mágica precisa requisitos: Samurai de nível 3, ela é feita de brisa, corta com agilidade e precisão. Permite conjurar 'Lufada de Vento' duas vezes ao dia, uma rajada poderosa que empurra inimigos e dispersa gases ou vapores e apaga chamas médias. <br> <strong>Dano:</strong> 50 + d12<br> <strong>Durabilidade:</strong> 4s",
+      "quantidade": 1
+    },
+    {
+      "id": "samurai5",
+      "nome": "Wakizashi, Anulador",
+      "material": "Aço mágico<br>Corpo a Corpo, Raro<br> Samurai nível 5",
+      "efeito": "",
+      "imagem": "/img/lojaSamurai/katanaWakizashi.png",
+      "valor": 3780,
+      "descricao": "Uma wakizashi que pode anular um Dom lançadas contra o usuário, ou com efeitos reduzidos. <strong>Dano:</strong> 50 <strong>Durabilidade:</strong> 3s",
+      "quantidade": 2
+    },
+    {
+      "id": "samurai6",
+      "nome": "Wakizashi da Serenidade",
+      "material": "Aço espiritual<br>Raro<br>Samurai 4",
+      "efeito": "<strong>Acalmar Emoções</strong><br>Seu Teste Classe + Raciocínio (custo: 5mn)",
+      "imagem": "/img/lojaSamurai/katanaSerenidade.png",
+      "valor": 22999,
+      "descricao": "Esta wakizashi emana uma aura de calma, concedendo resistência contra efeitos mentais. Pode lançar 'Acalmar Emoções' uma vez por dia.<br> <strong>Dano</strong> 70 + 5d6, <strong>Durabilidade:</strong> 4 (corte).",
+      "quantidade": 1
+    },
+    {
+      "id": "samurai7",
+      "nome": "Naginata Espiritual",
+      "material": "Aço sagrado + Componentes<br>Raro<br> Corpo a Corpo<br>Samurai 3 ",
+      "efeito": "<strong>Passiva travessa do Espirito:</strong><br>O dano que você causa a metade é dano verdadeiro.<br><strong>Devoradora:</strong><br> Cada Alma (até as comuns) aumenta dano +2, limite 25 soul",
+      "imagem": "/img/lojaSamurai/naginata.png",
+      "valor": 1200,
+      "descricao": "Uma poderosa naginata que se alimenta da energia espiritual de seu portador (round 2mn), fortalecendo seus ataques conforme consome almas derrotadas. A arma é imbuída de poder mágico e espiritual.<br> <strong>Dano:</strong> 55 <strong>Durabilidade:</strong> 3s",
+      "quantidade": 0
+    },
+    {
+      "id": "samurai8",
+      "nome": "Yoroi ",
+      "material": "Aço³ + Aço Negro³ + Componentes³<br>Épico<br> Armadura Médio<br>Samurai 4",
+      "efeito": "<strong>Passos Negros</strong><br> Sempre que o inimigo tiver no seu alcance se ele dar um passo, você pode dar +1 passo na direção dele (Custo por passos: 1mn)",
+      "imagem": "/img/lojaSamurai/armaduraYoroi.png",
+      "valor": 12298,
+      "descricao": "Este magnífico conjunto de armadura samurai é forjado com placas de aço polido, meticulosamente trabalhadas para refletir a luz de forma imponente. Detalhes em ouro adornam cada peça, com símbolos que representam os ideais de honra e tradição do samurai gravados em relevo. A combinação de elegância e força faz desta armadura uma verdadeira obra de arte.<br><strong>HpD: </strong>150 <strong>Durabilidade:</strong> 3s",
+      "quantidade": 6
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+    "itens": [
+        {
+            "id": "arqueiro1",
+            "nome": "Canalizador de Energia Simples",
+            "material": "Cristais mágicos e madeira encantada",
+            "efeito": "+1 acerto.",
+            "imagem": "/img/itens/canalizadorEnergiaSimples.png",
+            "valor": 500,
+            "descricao": "Um simples canalizador de energia mágica que concede um pequeno bônus de precisão nos ataques.",
+            "quantidade": 5
+        },
+        {
+            "id": "arqueiro2",
+            "nome": "Arco Canalizador de Energia de Fogo",
+            "material": "Madeira encantada e runas de fogo",
+            "efeito": "Causa uma explosão ao atingir inimigos próximos, com dano reduzido em área.",
+            "imagem": "/img/itens/arcoEnergiaFogo.png",
+            "valor": 1200,
+            "descricao": "Um arco mágico que canaliza a energia do fogo, criando uma explosão ao atingir o alvo, causando dano reduzido aos inimigos ao redor.",
+            "quantidade": 3
+        },
+        {
+            "id": "arqueiro3",
+            "nome": "Scall - Canalizadora de Energia",
+            "material": "Madeira negra e cristal arcano",
+            "efeito": "Causa grande dano ao canalizar energia em duas flechas físicas.",
+            "imagem": "/img/itens/scall.png",
+            "valor": 1500,
+            "descricao": "Scall é uma arma rara que canaliza energia em duas flechas físicas, criando um ataque devastador em combate.",
+            "quantidade": 2
+        },
+        {
+            "id": "arqueiro4",
+            "nome": "Aljava",
+            "material": "Couro reforçado e tecido resistente",
+            "efeito": "Capacidade de armazenamento: 40 flechas.",
+            "imagem": "/img/itens/aljava.png",
+            "valor": 100,
+            "descricao": "Uma aljava simples, capaz de armazenar até 40 flechas, ideal para arqueiros que precisam de grande capacidade de munição.",
+            "quantidade": 10
+        },
+        {
+            "id": "arqueiro5",
+            "nome": "Arco Longo Élfico - Flecha da Aurora",
+            "material": "Madeira de Carvalho Dourado e lâmina de Mithril",
+            "efeito": "1d10+4 de dano perfurante. Encantamentos: Velocidade, Precisão, Penetração. Runas: Alvorada, Harmonia, Resistência. Habilidades: Disparo Rápido, Visão Aguda, Flecha da Aurora.",
+            "imagem": "/img/itens/arcoLongoElfico.png",
+            "valor": 2500,
+            "descricao": "Um arco lendário, forjado pelos elfos, que concede velocidade, precisão e habilidades especiais, incluindo o poder de conjurar uma Flecha da Aurora.",
+            "quantidade": 1
+        },
+        {
+            "id": "arqueiro6",
+            "nome": "Yumi da Flecha Incandescente",
+            "material": "Madeira encantada e runas de fogo",
+            "efeito": "Causa 1d6 de dano de fogo adicional. Pode ser usado como foco de conjuração para feitiços de fogo.",
+            "imagem": "/img/itens/yumiFlechaIncandescente.png",
+            "valor": 1800,
+            "descricao": "Um arco mágico que cria flechas de fogo e pode ser usado como foco para conjurações de magia de fogo.",
+            "quantidade": 2
+        }
+    ]
+}

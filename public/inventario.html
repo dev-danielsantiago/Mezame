@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventário</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .body {
+            margin-top: 20px;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            background-color: #f9f9f9;
+            width: 150px;
+            position: relative;
+            color: black;
+        }
+
+        .card img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .delete-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .delete-btn:hover {
+            background-color: darkred;
+        }
+
+        .origem {
+            font-size: 12px;
+            color: gray;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Seu Inventário</h1>
+
+    <div id="inventario">
+        <!-- O inventário será preenchido dinamicamente com os itens -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const inventarioDiv = document.getElementById('inventario');
+
+            // Recupera o nome do jogador logado do localStorage
+            const username = localStorage.getItem('username');
+
+            if (!username) {
+                alert('Usuário não está logado. Faça login novamente.');
+                window.location.href = '/'; // Redirecionar para a página de login se não estiver logado
+                return;
+            }
+
+            // Função para carregar o inventário (presente e compras)
+            function carregarInventario() {
+                fetch(`/get-inventario/${encodeURIComponent(username)}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log('Dados do inventário recebidos:', data); // Log para verificar os dados recebidos do servidor
+
+                        if (data.presentes && data.presentes.length > 0) {
+                            inventarioDiv.innerHTML = ''; // Limpa o inventário antes de preencher
+                            data.presentes.forEach((presente, index) => {
+                                // Verifica se "nome" ou "item" está presente
+                                const itemNome = presente.nome || presente.item || 'Item sem nome';
+                                const descricao = presente.descricao || 'Sem descrição disponível';
+
+                                // Verifica a origem do item e loga o valor para depuração
+                                const origem = presente.origem || 'desconhecido';
+                                console.log(`Item: ${itemNome}, Origem recebida: ${origem}`); // Log para verificar a origem recebida
+
+                                let origemExibida = 'Desconhecido';
+
+                                if (origem === 'comprado') {
+                                    origemExibida = 'Comprado';
+                                } else if (origem === 'presente') {
+                                    origemExibida = 'Presente';
+                                }
+
+                                console.log(`Item: ${itemNome}, Origem exibida: ${origemExibida}`); // Log para verificar como a origem está sendo exibida
+
+                                const card = document.createElement('div');
+                                card.classList.add('card');
+                                card.setAttribute('data-index', index); // Adiciona o índice para referência
+                                card.innerHTML = `
+                                    <h3>${itemNome}</h3>
+                                    <p>${descricao}</p>
+                                    <img src="${presente.imagem || 'default-image.png'}" alt="${itemNome}">
+                                    <p class="origem">Origem: ${origemExibida}</p>
+                                    <button class="delete-btn">Excluir</button>
+                                `;
+
+                                // Adiciona funcionalidade de deletar
+                                const deleteButton = card.querySelector('.delete-btn');
+                                deleteButton.addEventListener('click', function () {
+                                    deletarItem(index);
+                                });
+
+                                inventarioDiv.appendChild(card);
+                            });
+                        } else {
+                            inventarioDiv.innerHTML = '<p>Você ainda não recebeu presentes ou comprou itens.</p>';
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erro ao carregar inventário:', error);
+                        inventarioDiv.innerHTML = '<p>Erro ao carregar inventário.</p>';
+                    });
+            }
+
+            // Função para deletar um item
+            function deletarItem(index) {
+                fetch(`/deletar-item/${encodeURIComponent(username)}/${index}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => {
+                        if (!res.ok) {
+                            throw new Error(`Erro na deleção: ${res.statusText}`);
+                        }
+                        return res.json();
+                    })
+                    .then(data => {
+                        if (data.success) {
+                            const cardToDelete = document.querySelector(`.card[data-index="${index}"]`);
+                            if (cardToDelete) {
+                                cardToDelete.remove(); // Remove o card da tela
+                            }
+                        } else {
+                            alert('Erro ao deletar item.');
+                        }
+                    })
+                    .catch(error => console.error('Erro ao deletar item:', error));
+            }
+
+            // Carregar o inventário ao carregar a página
+            carregarInventario();
+        });
+    </script>
+
+</body>
+
+</html>

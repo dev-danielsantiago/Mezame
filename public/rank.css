@@ -1,0 +1,146 @@
+/* Estilo global */
+body {
+    background-color: #0d0d0d; /* Fundo bem escuro */
+    color: #eaeaea; /* Cor de texto clara */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #ffffff; /* Texto em branco */
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+.tesouro-img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+/* Estilo da lista de ranking */
+ul#ranking-list {
+    list-style: none;
+    padding: 0;
+    width: 90%;
+    max-width: 600px;
+}
+
+ul#ranking-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #1a1a1a; /* Fundo dos cards em cinza bem escuro */
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+    border: 1px solid #333; /* Borda suave */
+}
+
+ul#ranking-list li:hover {
+    transform: scale(1.05);
+}
+
+/* Diferenciação dos três primeiros lugares */
+ul#ranking-list li.first-place {
+    background-color: #d3af1e; /* Ouro escuro */
+    color: #0d0d0d;
+    font-weight: bold;
+    box-shadow: 0 0 10px 2px rgba(80, 69, 23, 0.5);
+}
+
+ul#ranking-list li.second-place {
+    background-color: #8a8989; /* Prata escura */
+    color: #0d0d0d;
+    font-weight: bold;
+    box-shadow: 0 0 10px 2px rgba(83, 83, 83, 0.5);
+}
+
+ul#ranking-list li.third-place {
+    background-color: #99663c; /* Bronze escuro */
+    color: #0d0d0d;
+    font-weight: bold;
+    box-shadow: 0 0 10px 2px rgba(110, 73, 43, 0.5);
+}
+
+/* Estilo do conteúdo do ranking */
+.ranking-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.ranking-emoji {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.ranking-position {
+    font-size: 1.2rem;
+    color: #ffffff; /* Cor branca para contraste */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.151);
+    margin-right: 10px;
+}
+
+.player-name {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.336);
+    font-weight: bold;
+    color: #f7f7f7; /* Nome em amarelo suave */
+}
+
+.ranking-stats {
+    font-size: 1rem;
+    color: #faf8f8; /* Cor mais clara para estatísticas */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.281);
+    display: flex;
+    align-items: center;
+}
+
+.ranking-stats span {
+    margin-right: 5px;
+}
+
+/* Ajustes responsivos para telas menores */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    ul#ranking-list li {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .ranking-emoji {
+        font-size: 1.2rem;
+    }
+
+    .ranking-position {
+        font-size: 1rem;
+    }
+
+    .player-name {
+        font-size: 1.1rem;
+    }
+
+    .ranking-stats {
+        font-size: 0.9rem;
+    }
+}

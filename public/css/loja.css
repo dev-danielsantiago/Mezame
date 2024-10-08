@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #202020;
+    color: #f4f4f4;
+    text-align: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #161616;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    color: #E75480;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#saldoContainer {
+    margin-top: 10px;
+}
+
+#saldo {
+    font-size: 20px;
+    color: #eead2d;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #f4f4f498;
+}
+
+/* Estilização para listas */
+#itensContainer ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.item {
+    width: 180px; 
+    height: 600px; /* Aumenta a altura dos itens */
+    border: 3px solid rgb(118, 121, 118);
+    padding: 16px;
+    border-radius: 8px;
+    background-color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex-basis: calc(50% - 40px); /* 2 itens por linha */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 400px; /* Aumenta a altura mínima */
+    justify-content: space-between;
+}
+
+
+.card-content {
+    max-height: 0; /* Esconde o conteúdo inicialmente */
+    overflow-y: hidden; /* Sem barra de rolagem no início */
+    transition: max-height 0.5s ease; /* Animação suave na expansão */
+    padding-right: 10px; /* Espaço para a barra de rolagem */
+}
+
+.card-content.open {
+    max-height: 400px; /* Aumenta a altura máxima quando expandido */
+    overflow-y: scroll;  /* Ativa a rolagem */
+    border-top: 1px solid #444; /* Adiciona um separador visual */
+}
+
+/* Indicador visual para a rolagem (scrollbar) */
+.card-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.card-content::-webkit-scrollbar-thumb {
+    background-color: rgba(238, 173, 45, 0.4); /* Barra de rolagem cinza transparente */
+    border-radius: 10px;
+}
+
+.card-content::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.05); /* Cor do trilho */
+}
+
+/* Exibe uma leve sombra na lateral da barra de rolagem para dar dica visual */
+.card-content.open {
+    box-shadow: inset -3px 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.item img {
+    max-width: 100%;
+    height: 200px;
+    display: block;
+    margin: 0 auto 12px;
+}
+
+.item h3, .item p {
+    text-align: left;
+    margin: 8px 0;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.item h3 {
+    color: #eead2d;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.item p {
+    color: #e6e6e6;
+    margin-bottom: 10px;
+}
+
+.item p:nth-child(3) {
+    font-weight: bold;
+    color: #535353;
+}
+
+strong {
+    color: #eead2d;
+}
+
+/* Estilos dos botões */
+button.comprar-btn {
+    height: 50px;
+    width: 130px;
+    background-color: #083d13;
+    text-shadow: 1px 1px 1px #000000ab;
+    padding: 3px;
+    font-weight: 500;
+    color: #f5f0f0;
+    border: none;
+    border-radius: 0px 5px 5px 5px;
+    font-size: .89rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comprar-quantidade{
+    background-color: #363636;
+    border-radius: 0px 5px 5px 5px;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+button.comprar-btn:hover {
+    background-color: #E75480;
+}
+
+button.comprar-btn:disabled {
+    background-color: #850e0e;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    cursor: not-allowed;
+}
+
+button.comprar-btn:disabled:hover {
+    background-color: #555;
+}
+
+@media (max-width: 480px) {
+    .item {
+        flex-basis: calc(100% - 20px); /* 1 item por linha em telas pequenas */
+    }
+    .saiba-mais-btn {
+        height: 50px;
+        width: 130px;
+    }
+    button.comprar-btn {
+        height: 50px;
+        width: 130px; 
+    }
+}
+
+@media (max-width: 360px) {
+    .item {
+        flex-basis: calc(100% - 20px); /* Ajuste para telas muito pequenas */
+    }
+    
+    .saiba-mais-btn {
+        height: 50px;
+        width: 100px;
+    }
+    button.comprar-btn {
+        height: 50px;
+        width: 130px; 
+    }
+}
+
+.quantidade-container {
+    text-align: left;
+    font-size: 0.9em;
+    color: #ffffff9c;
+    font-style: italic;
+    font-weight: 400;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.178);
+}
+
+.saiba-mais-btn {
+    padding: 2px;
+    height: 50px;
+    width: 100px;
+    margin: 5px 0;
+    border-radius: 0px 5px 5px 5px;
+    border: none;
+    font-weight: 500;
+    background-color: rgb(119 85 18);
+    color: #f5f0f0;
+}
+
+.saiba-mais-btn:hover{
+    background-color: #E75480;
+}
+
+.quantidade-compra {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #5a5355;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    background-color: #202020;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.quantidade-compra:focus {
+    border-color: #eead2d;
+    box-shadow: 0 0 5px rgba(238, 173, 45, 0.5);
+}
+
+.quantidade-compra:disabled {
+    background-color: #444;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.saiba-comprar {
+    display: flex;
+    
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}

@@ -1,0 +1,54 @@
+{
+    "itens": [
+        {
+            "id": "atirador1",
+            "nome": "Arcabuz do Trovão",
+            "material": "Madeira reforçada com runas de tempestade e metal encantado",
+            "efeito": "Causa 1d8 de dano de perfuração e 1d4 de dano de trovão adicional.",
+            "imagem": "/img/itens/arcabuzDoTrovao.png",
+            "valor": 2500,
+            "descricao": "Um arcabuz mágico adornado com símbolos de tempestade, suas balas são eletrificadas, causando dano de perfuração e trovão.",
+            "quantidade": 2
+        },
+        {
+            "id": "atirador2",
+            "nome": "Pistola do Cavaleiro",
+            "material": "Metal refinado com detalhes em ouro",
+            "efeito": "Ataques críticos (20 e 19) causam dano adicional equivalente ao dano normal.",
+            "imagem": "/img/itens/pistolaDoCavaleiro.png",
+            "valor": 2000,
+            "descricao": "Uma pistola de cano curto com detalhes nobres, favorita entre os cavaleiros, com grande capacidade de causar ataques críticos devastadores.",
+            "quantidade": 3
+        },
+        {
+            "id": "atirador3",
+            "nome": "Pistola do Feiticeiro",
+            "material": "Metal antigo com gemas mágicas e símbolos arcanos",
+            "efeito": "Permite ao usuário lançar 'Míssil Mágico' uma vez por dia.",
+            "imagem": "/img/itens/pistolaDoFeiticeiro.png",
+            "valor": 2800,
+            "descricao": "Uma pistola arcana cravejada com gemas, que permite ao portador disparar mísseis mágicos além de ataques comuns.",
+            "quantidade": 2
+        },
+        {
+            "id": "atirador4",
+            "nome": "Mosquete do Dragão",
+            "material": "Madeira robusta e detalhes em escamas de dragão",
+            "efeito": "Causa 1d10 de dano de perfuração e 1d6 de dano de fogo adicional.",
+            "imagem": "/img/itens/mosqueteDoDragao.png",
+            "valor": 3200,
+            "descricao": "Um mosquete ornamentado com dragões, capaz de lançar projéteis perfurantes e chamas devastadoras em seus alvos.",
+            "quantidade": 1
+        },
+        {
+            "id": "atirador5",
+            "nome": "Arma de Fogo do Troll",
+            "material": "Ossos de troll e metal encantado",
+            "efeito": "Regenera uma bala por dia.",
+            "imagem": "/img/itens/armaDeFogoDoTroll.png",
+            "valor": 3500,
+            "descricao": "Uma arma mística feita de ossos de troll, com a habilidade de regenerar sua munição, ideal para longas batalhas.",
+            "quantidade": 1
+        }
+    ]
+}

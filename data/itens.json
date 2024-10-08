@@ -1,0 +1,44 @@
+{
+    "itens": [
+        {
+            "nome": "Luva de Batalha",
+            "material": "Couro reforçado e metal leve",
+            "tipo": "Comum",
+            "imagem": "caminho/para/luva_batalha.jpg",
+            "valor": 200,
+            "descricao": "Luva resistente usada por lutadores para melhorar a aderência e aumentar a proteção durante combates. Nível: Comum."
+        },
+        {
+            "nome": "Cinto de Força",
+            "material": "Couro e fivelas de ferro",
+            "tipo": "Incomum",
+            "imagem": "caminho/para/cinto_forca.jpg",
+            "valor": 500,
+            "descricao": "Cinto mágico que concede um bônus de força ao usuário, ideal para levantar cargas pesadas em combate. Nível: Incomum."
+        },
+        {
+            "nome": "Botas de Velocidade",
+            "material": "Couro de lobo e aço leve",
+            "tipo": "Lendário",
+            "imagem": "caminho/para/botas_velocidade.jpg",
+            "valor": 1000,
+            "descricao": "Essas botas permitem ao lutador mover-se com grande rapidez, aumentando sua agilidade durante batalhas. Nível: Lendário."
+        },
+        {
+            "nome": "Capacete do Gladiador",
+            "material": "Aço e couro",
+            "tipo": "Comum",
+            "imagem": "caminho/para/capacete_gladiador.jpg",
+            "valor": 300,
+            "descricao": "Capacete resistente que oferece proteção adicional à cabeça, típico de gladiadores em arenas. Nível: Comum."
+        },
+        {
+            "nome": "Armadura de Combate",
+            "material": "Aço reforçado",
+            "tipo": "Lendário",
+            "imagem": "caminho/para/armadura_combate.jpg",
+            "valor": 1500,
+            "descricao": "Armadura robusta que oferece alta proteção em combate corpo a corpo, usada por lutadores experientes. Nível: Lendário."
+        }
+    ]
+}
