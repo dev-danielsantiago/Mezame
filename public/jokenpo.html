@@ -42,6 +42,8 @@
     <audio id="audioBackground" src="audio/fundo.mp3" loop autoplay></audio>
 
     <script>
+        const audioBackground = document.getElementById('audioBackground');
+        audioBackground.volume = 0.20;
         const username = localStorage.getItem('username');
         document.getElementById('usuario').innerText = `Usuário: ${username}`;
     

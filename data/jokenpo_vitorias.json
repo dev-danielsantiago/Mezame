@@ -2,8 +2,8 @@
   "jogadores": [
     {
       "username": "Hsbiel",
-      "vitorias": 0,
-      "derrotas": 0
+      "vitorias": 16,
+      "derrotas": 17
     },
     {
       "username": "Viny001",
@@ -17,8 +17,8 @@
     },
     {
       "username": "Necrolorde",
-      "vitorias": 0,
-      "derrotas": 0
+      "vitorias": 5,
+      "derrotas": 12
     },
     {
       "username": "Cammy",
@@ -27,8 +27,8 @@
     },
     {
       "username": "Number",
-      "vitorias": 4,
-      "derrotas": 2
+      "vitorias": 10,
+      "derrotas": 7
     },
     {
       "username": "Mestre",
@@ -49,6 +49,11 @@
       "username": "Reis",
       "vitorias": 0,
       "derrotas": 0
+    },
+    {
+      "username": "Ludo",
+      "vitorias": 8,
+      "derrotas": 3
     }
   ]
 }

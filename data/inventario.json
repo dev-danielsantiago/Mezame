@@ -4,39 +4,180 @@
       "username": "Hsbiel",
       "presentes": [
         {
+          "nome": "Yoroi ",
+          "descricao": "Este magnífico conjunto de armadura samurai é forjado com placas de aço polido, meticulosamente trabalhadas para refletir a luz de forma imponente. Detalhes em ouro adornam cada peça, com símbolos que representam os ideais de honra e tradição do samurai gravados em relevo. A combinação de elegância e força faz desta armadura uma verdadeira obra de arte.<br><strong>HpD: </strong>150 <strong>Durabilidade:</strong> 3s",
+          "valor": 12298,
+          "imagem": "/img/lojaSamurai/armaduraYoroi.png",
+          "quantidade": 1,
+          "origem": "Presente do Alex Reis"
+        },
+        {
+          "nome": "Poção Cura Simples",
+          "descricao": "Uma poção simples que restaura 35 pontos de vitalidade. Atenção: possui toxidade que precisa ser monitorada.",
+          "valor": 479.98,
+          "imagem": "/img/lojageral/poçãoCura.png",
+          "quantidade": 1,
+          "origem": "Presente do Alex Reis"
+        },
+        {
+          "nome": "Poção Aura Simples",
+          "descricao": "Esta poção restaura 35 pontos de aura. Possui toxidade, e o uso excessivo pode causar envenenamento.",
+          "valor": 641,
+          "imagem": "/img/lojageral/poçãoAura.jpg",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Lanterna de Aura",
+          "descricao": "Uma lanterna resistente que oferece luz por até 10 round. ",
+          "valor": 450.6,
+          "imagem": "/img/lojageral/laterna.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Kit de Refeição",
+          "descricao": "Um kit básico de refeição para aventureiros, contendo os utensílios essenciais.",
+          "valor": 950,
+          "imagem": "/img/lojageral/kitRefeição.png",
+          "quantidade": 1,
+          "origem": "Presente do Alex Reis"
+        },
+        {
+          "nome": "Ração de Viagem",
+          "descricao": "Uma ração de viagem prática que deixa o viajante sem fome e permitindo que lock life não piore.",
+          "valor": 150,
+          "imagem": "/img/lojageral/raçãoViagem.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Ração de Viagem",
+          "descricao": "Uma ração de viagem prática que deixa o viajante sem fome e permitindo que lock life não piore.",
+          "valor": 150,
+          "imagem": "/img/lojageral/raçãoViagem.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Baú",
+          "descricao": "Um baú resistente ideal para guardar 6 itens pequenos para colocar no inventário.",
+          "valor": 300,
+          "imagem": "/img/lojageral/bau.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Kit de Calígrafo",
+          "descricao": "Um kit completo para calígrafos, ideal para a criação de pergaminhos mágicos e anotações detalhadas.",
+          "valor": 100,
+          "imagem": "/img/lojageral/kitCaligrafo.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Saco de Dormir com  Aura",
+          "descricao": "Um saco de dormir confortável que acelera a regeneração de vitalidade e aura durante o repouso em aventuras.",
+          "valor": 280,
+          "imagem": "/img/lojageral/sacoDormir.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Saco de Dormir com  Aura",
+          "descricao": "Um saco de dormir confortável que acelera a regeneração de vitalidade e aura durante o repouso em aventuras.",
+          "valor": 280,
+          "imagem": "/img/lojageral/sacoDormir.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Saco de Dormir com  Aura",
+          "descricao": "Um saco de dormir confortável que acelera a regeneração de vitalidade e aura durante o repouso em aventuras.",
+          "valor": 280,
+          "imagem": "/img/lojageral/sacoDormir.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Pé de Cabra com Aura",
+          "descricao": "Um pé de cabra resistente que serve como uma ferramenta versátil, útil em diversas situações durante aventuras.",
+          "valor": 220,
+          "imagem": "/img/lojageral/peCabra.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Luneta com Aura",
+          "descricao": "Uma luneta de alta precisão, ideal para observações de longa distância em terrenos inexplorados.",
+          "valor": 350,
+          "imagem": "/img/lojageral/luneta.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Caneca",
+          "descricao": "Uma caneca durável que mantém a temperatura de bebidas, ideal para aventureiros que precisam se manter hidratados.",
+          "valor": 50,
+          "imagem": "/img/lojageral/caneca.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Caneca",
+          "descricao": "Uma caneca durável que mantém a temperatura de bebidas, ideal para aventureiros que precisam se manter hidratados.",
+          "valor": 50,
+          "imagem": "/img/lojageral/caneca.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Caneca",
+          "descricao": "Uma caneca durável que mantém a temperatura de bebidas, ideal para aventureiros que precisam se manter hidratados.",
+          "valor": 50,
+          "imagem": "/img/lojageral/caneca.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Kit de Escalada com aura",
+          "descricao": "Um kit completo para escalada, contendo cordas resistentes e ganchos de aço, ideal para terrenos íngremes e montanhas.",
+          "valor": 150,
+          "imagem": "/img/lojageral/kitEscalada.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Sino",
+          "descricao": "Um sino feito de bronze mágico, capaz de emitir um som claro e forte que pode ser ouvido a longas distâncias.",
+          "valor": 125,
+          "imagem": "/img/lojageral/sino.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "tipoCaixa": "normal",
+          "item": "Poção Cura Simples",
+          "descricao": "Restaura 35 de vitalidade. Atenção: possui toxidade que precisa ser monitorada.",
+          "imagem": "/img/lojageral/poçãoCura.png"
+        },
+        {
+          "tipoCaixa": "superior",
+          "item": "Poção Cura Simples",
+          "descricao": "Restaura 35 de vitalidade. Atenção: possui toxidade que precisa ser monitorada.",
+          "imagem": "/img/lojageral/poçãoCura.png"
+        },
+        {
+          "tipoCaixa": "normal",
+          "item": "Poção Cura Simples",
+          "descricao": "Restaura 35 de vitalidade. Atenção: possui toxidade que precisa ser monitorada.",
+          "imagem": "/img/lojageral/poçãoCura.png"
+        },
+        {
           "tipoCaixa": "lenda",
-          "item": "Luva de Batalha",
-          "descricao": "Luva resistente usada por lutadores para melhorar a aderência e aumentar a proteção durante combates. Nível: Comum.",
-          "imagem": "caminho/para/luva_batalha.jpg",
-          "origem": "presente"
-        },
-        {
-          "tipoCaixa": "normal",
-          "item": "A comedora de cu",
-          "descricao": "Faz a pessoa te dar o cu",
-          "imagem": "Imagem indisponível",
-          "origem": "presente"
-        },
-        {
-          "tipoCaixa": "normal",
-          "item": "Luva de Batalha",
-          "descricao": "Luva resistente usada por lutadores para melhorar a aderência e aumentar a proteção durante combates. Nível: Comum.",
-          "imagem": "caminho/para/luva_batalha.jpg",
-          "origem": "presente"
-        },
-        {
-          "nome": "Elixir da Vitalidade",
-          "descricao": "Aumenta temporariamente os pontos de vida máximos do usuário em 50%.",
-          "valor": 1000,
-          "imagem": "caminho/para/imagem/elixir_vitalidade.png",
-          "origem": "comprado"
-        },
-        {
-          "nome": "Katana Comumm",
-          "descricao": "Uma arma simples e eficiente, amplamente usada por guerreiros iniciantes em combates rápidos.<br> <strong>Dano:</strong> 20 + 1d4 (corte), <strong>Durabilidade:</strong> 2s.",
-          "valor": 242,
-          "imagem": "/img/lojaSamurai/katanaComum.png",
-          "origem": "comprado"
+          "item": "Traje Tático Personalizado",
+          "descricao": "100 DHP",
+          "imagem": "/img/lojageral/trajePersonalizado.png"
         }
       ]
     },
@@ -45,24 +186,39 @@
       "presentes": [
         {
           "tipoCaixa": "normal",
-          "item": "Item não encontrado",
-          "descricao": "Descrição indisponível",
-          "imagem": "Imagem indisponível",
-          "origem": "presente"
+          "item": "Poção Aura Simples",
+          "descricao": "Esta poção restaura 35 pontos de aura.",
+          "imagem": "/img/lojageral/poçãoAura.jpg"
+        },
+        {
+          "tipoCaixa": "normal",
+          "item": "Poção Cura Simples",
+          "descricao": "Restaura 35 de vitalidade. Atenção: possui toxidade que precisa ser monitorada.",
+          "imagem": "/img/lojageral/poçãoCura.png"
         },
         {
           "tipoCaixa": "superior",
-          "item": "Item não encontrado",
-          "descricao": "Descrição indisponível",
-          "imagem": "Imagem indisponível",
-          "origem": "presente"
+          "item": "Poção Cura Simples",
+          "descricao": "Restaura 35 de vitalidade. Atenção: possui toxidade que precisa ser monitorada.",
+          "imagem": "/img/lojageral/poçãoCura.png"
+        },
+        {
+          "tipoCaixa": "superior",
+          "item": "Poção Cura Simples",
+          "descricao": "Restaura 35 de vitalidade. Atenção: possui toxidade que precisa ser monitorada.",
+          "imagem": "/img/lojageral/poçãoCura.png"
+        },
+        {
+          "tipoCaixa": "normal",
+          "item": "Poção Cura Simples",
+          "descricao": "Restaura 35 de vitalidade. Atenção: possui toxidade que precisa ser monitorada.",
+          "imagem": "/img/lojageral/poçãoCura.png"
         },
         {
           "tipoCaixa": "lenda",
-          "item": "Item não encontrado",
-          "descricao": "Descrição indisponível",
-          "imagem": "Imagem indisponível",
-          "origem": "presente"
+          "item": "Poção Aura Simples",
+          "descricao": "Esta poção restaura 35 pontos de aura.",
+          "imagem": "/img/lojageral/poçãoAura.jpg"
         }
       ]
     },
@@ -86,12 +242,405 @@
           "descricao": "Luva resistente usada por lutadores para melhorar a aderência e aumentar a proteção durante combates. Nível: Comum.",
           "imagem": "caminho/para/luva_batalha.jpg",
           "origem": "presente"
+        },
+        {
+          "nome": "Espátula Dourada",
+          "descricao": "Uma espátula lendária que concede poderes extraordinários em combate e sobrevivência, ideal para aventureiros versáteis.",
+          "valor": 197487.99,
+          "imagem": "/img/lojageral/espatulaDourada.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Coroa de Duendes",
+          "descricao": "Uma coroa lendária, forjada pelos duendes, que aumenta o ganho de ouro durante invasões bem-sucedidas.",
+          "valor": 100000.01,
+          "imagem": "/img/lojageral/coroaDuendes.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Kit de Mutagênico Fhoer",
+          "descricao": "Um kit especializado contendo mutagênicos que aprimoram atributos físicos e mentais, sendo utilizado estrategicamente por caçadores.",
+          "valor": 15000,
+          "imagem": "/img/lojacacador/mutagenico.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Medalhão de Fhoer",
+          "descricao": "Este medalhão vibra na presença de magia e criaturas mágicas, alertando o usuário sobre perigos sobrenaturais.",
+          "valor": 5000.2,
+          "imagem": "/img/lojacacador/medalhaoFhoer.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Chicote Matador de Vampiros",
+          "descricao": "Este chicote é uma arma exótica usada para caçar vampiros e outras criaturas da noite. Causa dano melhorado automático contra esses seres e possui várias runas de poder.",
+          "valor": 20000,
+          "imagem": "/img/lojacacador/chicote.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Farda de Caçador (Comum)",
+          "descricao": "Uma vestimenta leve e resistente, ideal para caçadores que precisam de agilidade e proteção em suas missões.",
+          "valor": 4600,
+          "imagem": "/img/lojacacador/farda.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Armas de Fhoer",
+          "descricao": "As armas feitas de Fhoerita têm propriedades regenerativas e sacras, sendo leais ao caçador que as empunha.",
+          "valor": 4205,
+          "imagem": "/img/lojacacador/armas.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Besta do Predador da Noite",
+          "descricao": "Uma besta poderosa que drena a vida dos alvos e concede visão noturna ao caçador.",
+          "valor": 7020,
+          "imagem": "/img/lojacacador/bestaNoite.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Manto da Floresta Viva",
+          "descricao": "Um manto mágico que se regenera e proporciona camuflagem, além de conceder resistência a veneno e fogo.",
+          "valor": 29000,
+          "imagem": "/img/lojacacador/mantoFloresta.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Grimório de Quimeras",
+          "descricao": "Este grimório contém informações valiosas sobre fraquezas e táticas contra criaturas sobrenaturais, concedendo vantagens estratégicas ao enfrentá-las.",
+          "valor": 8000,
+          "imagem": "/img/lojacacador/grimorioBesta.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Água Benta",
+          "descricao": "A Água Benta confere às armas banhadas um bônus sagrado. Banhar armas com propriedades sagradas, tornando-as mais eficazes contra seres malignos.",
+          "valor": 750,
+          "imagem": "/img/lojacacador/aguaBenta.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Armadilha de Caça Encantada",
+          "descricao": "Uma armadilha robusta usada para capturar presas. Causa 25 de dano true, você pode colocar essa armadilhas no numero do dado dos alvos (limite 10).",
+          "valor": 3500,
+          "imagem": "/img/lojacacador/armadilha.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Arco da Presa Fugaz",
+          "descricao": "Um arco mágico que inflige dano venenoso e concede habilidades furtivas ao caçador.",
+          "valor": 2800,
+          "imagem": "/img/lojacacador/arcoPresa.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Adaga do Caçador da Lua",
+          "descricao": "Uma adaga mágica que brilha sob a luz da lua, causando dano extra à noite e permitindo conjurar magias lunares.",
+          "valor": 15000,
+          "imagem": "/img/lojacacador/adagaLua.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Espada do Predador",
+          "descricao": "Uma espada mágica que aumenta a eficácia contra criaturas selvagens e permite marcar presas para ataques mais precisos.",
+          "valor": 18000,
+          "imagem": "/img/lojacacador/espadaPredador.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Pedras de Forja Nível 2",
+          "descricao": "Essas pedras podem criar equipamentos, conferindo um bônus de +2. Utilizada por Mestres Artesãos.",
+          "valor": 8000,
+          "imagem": "/img/lojageral/pedraForja.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Pedras de Forja Nível 1",
+          "descricao": "Essas pedras místicas podem criar equipamentos, conferindo um bônus de +2 ao item aprimorado.",
+          "valor": 5000,
+          "imagem": "/img/lojageral/pedraForja.png",
+          "quantidade": 8,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Sino",
+          "descricao": "Um sino feito de bronze mágico, capaz de emitir um som claro e forte que pode ser ouvido a longas distâncias.",
+          "valor": 125,
+          "imagem": "/img/lojageral/sino.png",
+          "quantidade": 6,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Kit de Escalada com aura",
+          "descricao": "Um kit completo para escalada, contendo cordas resistentes e ganchos de aço, ideal para terrenos íngremes e montanhas.",
+          "valor": 150,
+          "imagem": "/img/lojageral/kitEscalada.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Luneta com Aura",
+          "descricao": "Uma luneta de alta precisão, ideal para observações de longa distância em terrenos inexplorados.",
+          "valor": 350,
+          "imagem": "/img/lojageral/luneta.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Pé de Cabra com Aura",
+          "descricao": "Um pé de cabra resistente que serve como uma ferramenta versátil, útil em diversas situações durante aventuras.",
+          "valor": 220,
+          "imagem": "/img/lojageral/peCabra.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Saco de Dormir com  Aura",
+          "descricao": "Um saco de dormir confortável que acelera a regeneração de vitalidade e aura durante o repouso em aventuras.",
+          "valor": 280,
+          "imagem": "/img/lojageral/sacoDormir.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Aríete Portátil com Aura",
+          "descricao": "Um aríete portátil e robusto, ideal para quebrar estruturas com eficácia durante invasões.",
+          "valor": 750,
+          "imagem": "/img/lojageral/arietePortatil.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Pedra de Amolar",
+          "descricao": "Uma pedra de amolar encantada que pode restaurar durabilidade de armas.",
+          "valor": 2050,
+          "imagem": "/img/lojageral/PedraAmolar.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Kit de Calígrafo",
+          "descricao": "Um kit completo para calígrafos, ideal para a criação de pergaminhos mágicos e anotações detalhadas.",
+          "valor": 100,
+          "imagem": "/img/lojageral/kitCaligrafo.png",
+          "quantidade": 2,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Traje Tático Personalizado",
+          "descricao": "Uma armadura única e altamente personalizada, projetada para proteção máxima em combate.",
+          "valor": 10800.67,
+          "imagem": "/img/lojageral/trajePersonalizado.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Anel do Espírito Familiar",
+          "descricao": "Um anel lendário que vincula o usuário a um familiar, permitindo armazenar e convocar criatura.",
+          "valor": 6125,
+          "imagem": "/img/lojageral/anelFamiliar.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Pedras de Forja",
+          "descricao": "Relíquias antigas que aprimoram equipamentos, conferindo bônus poderosos em armas e armaduras.",
+          "valor": 5000,
+          "imagem": "/img/lojageral/pedraForja.png",
+          "quantidade": 8,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Ração de Viagem",
+          "descricao": "Uma ração de viagem prática que deixa o viajante sem fome e permitindo que lock life não piore.",
+          "valor": 150,
+          "imagem": "/img/lojageral/raçãoViagem.png",
+          "quantidade": 7,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Kit de Refeição",
+          "descricao": "Um kit básico de refeição para aventureiros, contendo os utensílios essenciais.",
+          "valor": 950,
+          "imagem": "/img/lojageral/kitRefeição.png",
+          "quantidade": 3,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Lanterna de Aura",
+          "descricao": "Uma lanterna resistente que oferece luz por até 10 round. ",
+          "valor": 450.6,
+          "imagem": "/img/lojageral/laterna.png",
+          "quantidade": 4,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Poção Cura Simples",
+          "descricao": "Uma poção simples que restaura 35 pontos de vitalidade. Atenção: possui toxidade que precisa ser monitorada.",
+          "valor": 479.98,
+          "imagem": "/img/lojageral/poçãoCura.png",
+          "quantidade": 10,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Poção Aura Simples",
+          "descricao": "Esta poção restaura 35 pontos de aura. Possui toxidade, e o uso excessivo pode causar envenenamento.",
+          "valor": 641,
+          "imagem": "/img/lojageral/poçãoAura.jpg",
+          "quantidade": 10,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Poção Veneno de Aura Simples",
+          "descricao": "Uma poção perigosa que drena 2 pontos de aura. Útil contra inimigos que dependem de aura.",
+          "valor": 2900.01,
+          "imagem": "/img/lojageral/poçãoVeneno.png",
+          "quantidade": 10,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Poção de Cura Avançada",
+          "descricao": "Uso seguro para aventureiros experientes.",
+          "valor": 1500.14,
+          "imagem": "/img/lojaPinel/poçãoAvançada.jpg",
+          "quantidade": 8,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Poção de Mana Restauradora",
+          "descricao": "Ideal para conjuradores em combate prolongado.",
+          "valor": 1504.1,
+          "imagem": "/img/lojaPinel/poçãoManaAvançado.jpg",
+          "quantidade": 10,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Poção de Inverno Eterno",
+          "descricao": "Concede imunidade temporária ao frio e aumenta o poder de magias de gelo.",
+          "valor": 15000,
+          "imagem": "/img/lojaPinel/poçãoFrio.jpg",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Saco para Componentes²",
+          "descricao": "Usado para criação de itens tanto inicial ao avançados",
+          "valor": 150,
+          "imagem": "/img/lojageral/saco.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Bolsa de Componentes⁷",
+          "descricao": "Usado para criação de itens tanto inicial ao avançados",
+          "valor": 1050.35,
+          "imagem": "/img/lojageral/componentes.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Faca da Drenagem Vital",
+          "descricao": "Perfuração. Durabilidade: 3. Ao atingir um alvo, cura o usuário em proporção ao dano causado.",
+          "valor": 2200,
+          "imagem": "/img/lojanecromancer/facaVital.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Lança da Morte Sussurrante",
+          "descricao": "Durabilidade: 3s. permite lançar 'Cegueira/Surdez' uma vez por dia.",
+          "valor": 2800,
+          "imagem": "/img/lojanecromancer/lançaMorte.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Livro da Ressurreição Profana",
+          "descricao": "Durabilidade: 2s. Concede +2 de bônus em feitiços necromânticos e permite conjurar 'Criar Mortos' uma vez por dia.",
+          "valor": 3400,
+          "imagem": "/img/lojanecromancer/livroRessussitarProfona.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Cetro da Putrefação",
+          "descricao": "Durabilidade: 2s. Permite conjurar 'Névoa Mortal' uma vez por dia, faz que todos raio de 5x5 fique envenenado 15 dano por turno.",
+          "valor": 3700,
+          "imagem": "/img/lojanecromancer/cetroPutrefacao.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Varinha do Senhor dos Mortos",
+          "descricao": "Permite lançar 'Animar Mortos' uma vez por dia e concede bônus em feitiços necromânticos.",
+          "valor": 3200,
+          "imagem": "/img/lojanecromancer/varinhaMortos.png",
+          "quantidade": 1,
+          "origem": "comprado"
         }
       ]
     },
     {
       "username": "Cammy",
-      "presentes": []
+      "presentes": [
+        {
+          "nome": "Luvas da Tempestade Estática",
+          "descricao": "Luvas imbuídas com energia elétrica, perfeitas para lutar contra inimigos com resistência a dano físico.",
+          "valor": 3200,
+          "imagem": "/img/lojalutador/Luvas da Tempestade Estática.jpg",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Traje Tático Personalizado",
+          "descricao": "Uma armadura única e altamente personalizada, projetada para proteção máxima em combate.",
+          "valor": 10800.67,
+          "imagem": "/img/lojageral/trajePersonalizado.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "tipoCaixa": "normal",
+          "item": "Poção Cura Simples",
+          "descricao": "Restaura 35 de vitalidade. Atenção: possui toxidade que precisa ser monitorada.",
+          "imagem": "/img/lojageral/poçãoCura.png"
+        },
+        {
+          "tipoCaixa": "normal",
+          "item": "Poção Cura Simples",
+          "descricao": "Restaura 35 de vitalidade. Atenção: possui toxidade que precisa ser monitorada.",
+          "imagem": "/img/lojageral/poçãoCura.png"
+        },
+        {
+          "tipoCaixa": "normal",
+          "item": "Poção Cura Simples",
+          "descricao": "Restaura 35 de vitalidade. Atenção: possui toxidade que precisa ser monitorada.",
+          "imagem": "/img/lojageral/poçãoCura.png"
+        },
+        {
+          "tipoCaixa": "lenda",
+          "item": "Poção Aura Simples",
+          "descricao": "Esta poção restaura 35 pontos de aura.",
+          "imagem": "/img/lojageral/poçãoAura.jpg"
+        }
+      ]
     },
     {
       "username": "Number",
@@ -103,6 +652,30 @@
           "imagem": "/img/lojaSamurai/katanaIncomum.png",
           "quantidade": 1,
           "origem": "comprado"
+        },
+        {
+          "tipoCaixa": "lenda",
+          "item": "Traje Tático Personalizado",
+          "descricao": "250 DHP",
+          "imagem": "/img/lojageral/trajePersonalizado.png"
+        },
+        {
+          "tipoCaixa": "lenda",
+          "item": "Poção Cura Simples",
+          "descricao": "Restaura 35 de vitalidade. Atenção: possui toxidade que precisa ser monitorada.",
+          "imagem": "/img/lojageral/poçãoCura.png"
+        },
+        {
+          "tipoCaixa": "lenda",
+          "item": "Poção Cura Simples",
+          "descricao": "Restaura 35 de vitalidade. Atenção: possui toxidade que precisa ser monitorada.",
+          "imagem": "/img/lojageral/poçãoCura.png"
+        },
+        {
+          "tipoCaixa": "superior",
+          "item": "Poção Cura Simples",
+          "descricao": "Restaura 35 de vitalidade. Atenção: possui toxidade que precisa ser monitorada.",
+          "imagem": "/img/lojageral/poçãoCura.png"
         }
       ]
     },
@@ -129,6 +702,80 @@
           "descricao": "Este magnífico conjunto de armadura samurai é forjado com placas de aço polido, meticulosamente trabalhadas para refletir a luz de forma imponente. Detalhes em ouro adornam cada peça, com símbolos que representam os ideais de honra e tradição do samurai gravados em relevo. A combinação de elegância e força faz desta armadura uma verdadeira obra de arte.<br><strong>HpD: </strong>150 <strong>Durabilidade:</strong> 3s",
           "valor": 12298,
           "imagem": "/img/lojaSamurai/armaduraYoroi.png",
+          "origem": "comprado"
+        }
+      ]
+    },
+    {
+      "username": "visita",
+      "presentes": [
+        {
+          "nome": "Ração de Viagem",
+          "descricao": "Uma ração de viagem prática que deixa o viajante sem fome e permitindo que lock life não piore.",
+          "valor": 150,
+          "imagem": "/img/lojageral/raçãoViagem.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        }
+      ]
+    },
+    {
+      "username": "Ludo",
+      "presentes": [
+        {
+          "nome": "Pergaminho",
+          "descricao": "Três folhas de pergaminho de alta qualidade, ideais para escrever magias ou registrar informações essenciais. Muito utilizado por magos e estudiosos.",
+          "valor": 80,
+          "imagem": "/img/lojageral/pergaminho.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Pergaminho",
+          "descricao": "Três folhas de pergaminho de alta qualidade, ideais para escrever magias ou registrar informações essenciais. Muito utilizado por magos e estudiosos.",
+          "valor": 80,
+          "imagem": "/img/lojageral/pergaminho.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Pergaminho",
+          "descricao": "Três folhas de pergaminho de alta qualidade, ideais para escrever magias ou registrar informações essenciais. Muito utilizado por magos e estudiosos.",
+          "valor": 80,
+          "imagem": "/img/lojageral/pergaminho.png",
+          "quantidade": 10,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Caneta Tinteiro",
+          "descricao": "Uma caneta elegante e durável, perfeita para escrever documentos importantes e anotações detalhadas. Essencial para qualquer aventureiro ou estudioso.",
+          "valor": 100.08,
+          "imagem": "/img/lojageral/canetaTinteiro.png",
+          "quantidade": 1,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Kit de Calígrafo",
+          "descricao": "Um kit completo para calígrafos, ideal para a criação de pergaminhos mágicos e anotações detalhadas.",
+          "valor": 100,
+          "imagem": "/img/lojageral/kitCaligrafo.png",
+          "quantidade": 5,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Tinta da Pergaminho",
+          "descricao": "Um pequeno frasco de tinta preta, feita para caligrafia e escritas detalhadas. A tinta é resistente ao tempo e adequada para inscrever encantamentos em pergaminhos e papiros.",
+          "valor": 99.56,
+          "imagem": "/img/lojageral/tintaPergaminho.png",
+          "quantidade": 10,
+          "origem": "comprado"
+        },
+        {
+          "nome": "Lanterna de Aura",
+          "descricao": "Uma lanterna resistente que oferece luz por até 10 round. ",
+          "valor": 450.6,
+          "imagem": "/img/lojageral/laterna.png",
+          "quantidade": 1,
           "origem": "comprado"
         }
       ]

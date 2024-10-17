@@ -1,244 +1,134 @@
 {
-    "itens": [
-        {
-            "id": "item1",
-            "nome": "Sangue do Diabo",
-            "material": "Mistura de Sangue de Demônio e Elixir das Sombras",
-            "efeito": "Durante a vigência desta habilidade, qualquer dano físico que você receber será refletido como dano verdadeiro no inimigo, causando 2 pontos de dano adicional.",
-            "imagem": "/img/itens/sangueDoDiabo.png",
-            "valor": 1200,
-            "descricao": "Habilidade: Sangue do Diabo. Duração: 5 rounds. Reflete dano físico recebido como dano verdadeiro no inimigo.",
-            "quantidade": 1
-        },
-        {
-            "id": "item2",
-            "nome": "Medalhão Mal Presságio",
-            "material": "Prata com essência de Espírito Ancião",
-            "efeito": "Anula o resultado do dado do alvo, forçando-o a rolar novamente.",
-            "imagem": "/img/itens/medalhaoMalPressagio.png",
-            "valor": 1500,
-            "descricao": "Habilidade: Medalhão Mal Presságio. Duração: Uma vez por combate. Anula o resultado do dado do alvo.",
-            "quantidade": 2
-        },
-        {
-            "id": "item3",
-            "nome": "Livro da Morte",
-            "material": "Couro Negro de Dragão Sombrio e Ossos de Necromantes",
-            "efeito": "Preserva corpos dentro de suas páginas, podendo ser invocados por necromantes.",
-            "imagem": "/img/itens/livroDaMorte.png",
-            "valor": 3200,
-            "descricao": "Habilidade: Livro da Morte. Duração: Até que o livro seja destruído. Permite preservar corpos para invocações necromânticas.",
-            "quantidade": 1
-        },
-        {
-            "id": "item4",
-            "nome": "Sickle: Kammu, os Perdidos",
-            "material": "Aço refinado com pó de almas e essência de maldição",
-            "efeito": "Curas são reduzidas.",
-            "imagem": "/img/itens/sickleKammu.png",
-            "valor": 1800,
-            "descricao": "Dano: Destreza + 1d8 + 10. Durabilidade: 100. Efeito: Reduz a eficácia de curas. Espaço para uma runa.",
-            "quantidade": 1
-        },
-        {
-            "id": "item5",
-            "nome": "Grande Foice",
-            "material": "Aço Negro encantado com Ossos de Feras Ancestrais",
-            "efeito": "Curas são reduzidas em -2.",
-            "imagem": "/img/itens/grandeFoice.png",
-            "valor": 2000,
-            "descricao": "Dano: 2d8 + 10 + Ocultismo e Arma Branca. Tipo de Dano: Cortante. Efeito: Reduz cura em -2.",
-            "quantidade": 3
-        },
-        {
-            "id": "item6",
-            "nome": "Boneco de Palha",
-            "material": "Palha encantada com Voodoo e Tecidos de Rituais",
-            "efeito": "Vincule maldições a indivíduos específicos a longa distância.",
-            "imagem": "/img/itens/bonecoPalha.png",
-            "valor": 1000,
-            "descricao": "Permite amaldiçoar um alvo a distância, vinculando o boneco ao alvo.",
-            "quantidade": 5
-        },
-        {
-            "id": "item7",
-            "nome": "Cajado das Almas Inquietas",
-            "material": "Madeira de Cipreste com Crânios de Guerreiros Caídos",
-            "efeito": "Concede +2 para lançar feitiços necromânticos. Uma vez por dia, pode lançar 'Reviver os Mortos'.",
-            "imagem": "/img/itens/cajadoAlmasInquietas.png",
-            "valor": 3500,
-            "descricao": "Dano: 1d6 (Impacto). Durabilidade: 14/14. Concede +2 para lançar feitiços necromânticos e permite 'Reviver os Mortos' uma vez por dia.",
-            "quantidade": 1
-        },
-        {
-            "id": "item8",
-            "nome": "Foice da Colheita Sombria",
-            "material": "Lâmina de Aço Necrótico e Punho de Ossos Sombrios",
-            "efeito": "Concede +1 de dano adicional necrótico. Uma vez por dia, pode lançar 'Toque Vampírico'.",
-            "imagem": "/img/itens/foiceColheitaSombria.png",
-            "valor": 2500,
-            "descricao": "Dano: 1d8 (Corte). Durabilidade: 16/16. Concede +1 de dano necrótico e pode lançar 'Toque Vampírico' uma vez por dia.",
-            "quantidade": 2
-        },
-        {
-            "id": "item1",
-            "nome": "Sangue do Diabo",
-            "material": "Mistura de Sangue de Demônio e Elixir das Sombras",
-            "efeito": "Durante a vigência desta habilidade, qualquer dano físico que você receber será refletido como dano verdadeiro no inimigo, causando 2 pontos de dano adicional.",
-            "imagem": "/img/itens/sangueDoDiabo.png",
-            "valor": 1200,
-            "descricao": "Habilidade: Sangue do Diabo. Duração: 5 rounds. Reflete dano físico recebido como dano verdadeiro no inimigo.",
-            "quantidade": 1
-        },
-        {
-            "id": "item2",
-            "nome": "Medalhão Mal Presságio",
-            "material": "Prata com essência de Espírito Ancião",
-            "efeito": "Anula o resultado do dado do alvo, forçando-o a rolar novamente.",
-            "imagem": "/img/itens/medalhaoMalPressagio.png",
-            "valor": 1500,
-            "descricao": "Habilidade: Medalhão Mal Presságio. Duração: Uma vez por combate. Anula o resultado do dado do alvo.",
-            "quantidade": 2
-        },
-        {
-            "id": "item3",
-            "nome": "Livro da Morte",
-            "material": "Couro Negro de Dragão Sombrio e Ossos de Necromantes",
-            "efeito": "Preserva corpos dentro de suas páginas, podendo ser invocados por necromantes.",
-            "imagem": "/img/itens/livroDaMorte.png",
-            "valor": 3200,
-            "descricao": "Habilidade: Livro da Morte. Duração: Até que o livro seja destruído. Permite preservar corpos para invocações necromânticas.",
-            "quantidade": 1
-        },
-        {
-            "id": "item4",
-            "nome": "Sickle: Kammu, os Perdidos",
-            "material": "Aço refinado com pó de almas e essência de maldição",
-            "efeito": "Curas são reduzidas.",
-            "imagem": "/img/itens/sickleKammu.png",
-            "valor": 1800,
-            "descricao": "Dano: Destreza + 1d8 + 10. Durabilidade: 100. Efeito: Reduz a eficácia de curas. Espaço para uma runa.",
-            "quantidade": 1
-        },
-        {
-            "id": "item5",
-            "nome": "Grande Foice",
-            "material": "Aço Negro encantado com Ossos de Feras Ancestrais",
-            "efeito": "Curas são reduzidas em -2.",
-            "imagem": "/img/itens/grandeFoice.png",
-            "valor": 2000,
-            "descricao": "Dano: 2d8 + 10 + Ocultismo e Arma Branca. Tipo de Dano: Cortante. Efeito: Reduz cura em -2.",
-            "quantidade": 3
-        },
-        {
-            "id": "item6",
-            "nome": "Boneco de Palha",
-            "material": "Palha encantada com Voodoo e Tecidos de Rituais",
-            "efeito": "Vincule maldições a indivíduos específicos a longa distância.",
-            "imagem": "/img/itens/bonecoPalha.png",
-            "valor": 1000,
-            "descricao": "Permite amaldiçoar um alvo a distância, vinculando o boneco ao alvo.",
-            "quantidade": 5
-        },
-        {
-            "id": "item7",
-            "nome": "Cajado das Almas Inquietas",
-            "material": "Madeira de Cipreste com Crânios de Guerreiros Caídos",
-            "efeito": "Concede +2 para lançar feitiços necromânticos. Uma vez por dia, pode lançar 'Reviver os Mortos'.",
-            "imagem": "/img/itens/cajadoAlmasInquietas.png",
-            "valor": 3500,
-            "descricao": "Dano: 1d6 (Impacto). Durabilidade: 14/14. Concede +2 para lançar feitiços necromânticos e permite 'Reviver os Mortos' uma vez por dia.",
-            "quantidade": 1
-        },
-        {
-            "id": "item8",
-            "nome": "Foice da Colheita Sombria",
-            "material": "Lâmina de Aço Necrótico e Punho de Ossos Sombrios",
-            "efeito": "Concede +1 de dano adicional necrótico. Uma vez por dia, pode lançar 'Toque Vampírico'.",
-            "imagem": "/img/itens/foiceColheitaSombria.png",
-            "valor": 2500,
-            "descricao": "Dano: 1d8 (Corte). Durabilidade: 16/16. Concede +1 de dano necrótico e pode lançar 'Toque Vampírico' uma vez por dia.",
-            "quantidade": 2
-        },
-        {
-            "id": "item9",
-            "nome": "Varinha do Senhor dos Mortos",
-            "material": "Madeira enegrecida de Carvalhos Ancestrais e Gemas Ocultas",
-            "efeito": "Concede +2 de bônus para lançar feitiços necromânticos. Uma vez por dia, permite lançar 'Animar Mortos'.",
-            "imagem": "/img/itens/varinhaSenhorMortos.png",
-            "valor": 3200,
-            "descricao": "Dano: 1d4 (Impacto). Durabilidade: 12/12. Permite lançar 'Animar Mortos' uma vez por dia e concede bônus em feitiços necromânticos.",
-            "quantidade": 1
-        },
-        {
-            "id": "item10",
-            "nome": "Cetro da Putrefação",
-            "material": "Ébano Sombrio com Runas Necróticas",
-            "efeito": "Concede +1 de dano adicional de ácido. Uma vez por dia, pode lançar 'Névoa Mortal'.",
-            "imagem": "/img/itens/cetroPutrefacao.png",
-            "valor": 2700,
-            "descricao": "Dano: 1d6 (Impacto). Durabilidade: 14/14. Permite conjurar 'Névoa Mortal' uma vez por dia.",
-            "quantidade": 1
-        },
-        {
-            "id": "item11",
-            "nome": "Livro da Ressurreição Profana",
-            "material": "Couro de Bestas Abissais e Pergaminhos de Magia Sombria",
-            "efeito": "Concede +2 de bônus para feitiços necromânticos. Pode lançar 'Criar Mortos' uma vez por dia.",
-            "imagem": "/img/itens/livroRessurreicaoProfana.png",
-            "valor": 3400,
-            "descricao": "Dano: 1d4 (Impacto). Durabilidade: 12/12. Concede +2 de bônus em feitiços necromânticos e permite conjurar 'Criar Mortos' uma vez por dia.",
-            "quantidade": 1
-        },
-        {
-            "id": "item12",
-            "nome": "Lança da Morte Sussurrante",
-            "material": "Aço Sombrio com Essência de Almas Perdidas",
-            "efeito": "Concede +1 de dano adicional necrótico. Uma vez por dia, pode lançar 'Cegueira/Surdez'.",
-            "imagem": "/img/itens/lancaMorteSussurrante.png",
-            "valor": 2800,
-            "descricao": "Dano: 1d8 (Perfuração). Durabilidade: 16/16. Concede +1 de dano necrótico e permite lançar 'Cegueira/Surdez' uma vez por dia.",
-            "quantidade": 2
-        },
-        {
-            "id": "item13",
-            "nome": "Faca da Drenagem Vital",
-            "material": "Lâmina de Sombras e Cristais Vampíricos",
-            "efeito": "Concede +1 de dano adicional necrótico. Ao atingir um alvo, cura o usuário em uma quantidade equivalente ao dano causado.",
-            "imagem": "/img/itens/facaDrenagemVital.png",
-            "valor": 2200,
-            "descricao": "Dano: 1d4 (Perfuração). Durabilidade: 12/12. Ao atingir um alvo, cura o usuário em proporção ao dano causado.",
-            "quantidade": 3
-        },
-        {
-            "id": "item14",
-            "nome": "Cajado da Sepultura Profunda",
-            "material": "Ossos de Anciões Encantados e Essência de Almas Perdidas",
-            "efeito": "Concede +2 de bônus para feitiços necromânticos. Uma vez por dia, pode lançar 'Falar Com Os Mortos'.",
-            "imagem": "/img/itens/cajadoSepulturaProfunda.png",
-            "valor": 3500,
-            "descricao": "Dano: 1d6 (Impacto). Durabilidade: 14/14. Permite lançar 'Falar Com Os Mortos' uma vez por dia.",
-            "quantidade": 1
-        },
-        {
-            "id": "item15",
-            "nome": "Espada da Perdição",
-            "material": "Lâmina Negra Forjada com Runas de Desespero",
-            "efeito": "Concede +1 de dano adicional necrótico. Uma vez por dia, pode lançar 'Infligir Ferimentos'.",
-            "imagem": "/img/itens/espadaPerdicao.png",
-            "valor": 2600,
-            "descricao": "Dano: 1d8 (Corte). Durabilidade: 16/16. Concede +1 de dano necrótico e permite lançar 'Infligir Ferimentos' uma vez por dia.",
-            "quantidade": 2
-        },
-        {
-            "id": "item16",
-            "nome": "Varinha da Escuridão Profunda",
-            "material": "Madeira das Florestas Sombrias com Gemas Negras",
-            "efeito": "Concede +2 de bônus para feitiços necromânticos. Uma vez por dia, pode lançar 'Escuridão'.",
-            "imagem": "/img/itens/varinhaEscuridaoProfunda.png",
-            "valor": 3200,
-            "descricao": "Dano: 1d4 (Impacto). Durabilidade: 12/12. Concede bônus para feitiços necromânticos e permite lançar 'Escuridão' uma vez por dia.",
-            "quantidade": 1
-        }
-    ]
+  "itens": [
+    {
+      "id": "item1",
+      "nome": "Sangue do Diabo",
+      "material": "Mistura de Sangue de Demônio e Elixir das Sombras<br>Comum",
+      "efeito": "Durante a vigência desta habilidade, qualquer dano físico que você receber será refletido como dano verdadeiro no inimigo, causando 2 pontos de dano adicional.",
+      "imagem": "/img/lojanecromancer/sangueDiabo.png",
+      "valor": 1200,
+      "descricao": "Habilidade: Sangue do Diabo. Duração: 5 rounds. Reflete 1 terço do dano físico recebido como dano verdadeiro no inimigo.",
+      "quantidade": 100
+    },
+    {
+      "id": "item2",
+      "nome": "Medalhão Mal Presságio",
+      "material": "Prata com essência de Espírito Ancião<br>Raro",
+      "efeito": "Anula o resultado do dado do alvo, forçando-o a rolar novamente, uso único.",
+      "imagem": "/img/lojanecromancer/medalhaoPressagio.png",
+      "valor": 150000,
+      "descricao": "Habilidade: Medalhão Mal Presságio. Duração: Uma vez por combate. Anula o resultado do dado do alvo.",
+      "quantidade": 2
+    },
+    {
+      "id": "item3",
+      "nome": "Livro da Morte",
+      "material": "Couro Negro de Dragão Sombrio e Ossos de Necromantes",
+      "efeito": "Preserva corpos dentro de suas páginas, podendo ser invocados por necromantes.<br>Comum",
+      "imagem": "/img/lojanecromancer/livroMorte.png",
+      "valor": 2600,
+      "descricao": "Habilidade: Livro da Morte. Duração: Até que o livro seja destruído. Permite preservar corpos para invocações necromânticas.",
+      "quantidade": 1000
+    },
+    {
+      "id": "item4",
+      "nome": "Sickle: Kammu, os Perdidos",
+      "material": "Aço refinado com pó de almas e essência de maldição<br>Incomum",
+      "efeito": "Curas são reduzidas 50%.",
+      "imagem": "/img/lojanecromancer/Kammu.png",
+      "valor": 30800,
+      "descricao": "Dano: 10% da vida máxima true, Durabilidade: 3s. Efeito: Reduz a eficácia de curas. Espaço para uma runa.",
+      "quantidade": 1
+    },
+    {
+      "id": "item5",
+      "nome": "Grande Foice",
+      "material": "Aço Negro encantado com Ossos de Feras Ancestrais.<br>Incomum",
+      "efeito": "Curas são reduzidas 50%.",
+      "imagem": "/img/lojanecromancer/grandeFoice.png",
+      "valor": 20000,
+      "descricao": "Dano: 7d10 + 22 + Ocultismo e Arma Branca. Tipo de Dano: Cortante. Efeito: Reduz cura em 50%.",
+      "quantidade": 30
+    },
+    {
+      "id": "item6",
+      "nome": "Boneco de Palha",
+      "material": "Palha encantada com Voodoo e Tecidos de Rituais<br>Incomum",
+      "efeito": "Vincule maldições a indivíduos específicos a longa distância. Precisa pegar resquício de aura mais aura coletada mais eficaz se falhar no teste o dano voltará para você com uma eficácia menor que 50%. Cada ataque causa 25% da vida máxima.",
+      "imagem": "/img/lojanecromancer/bonecoPalha.png",
+      "valor": 20000,
+      "descricao": "Permite amaldiçoar um alvo a distância, vinculando o boneco ao alvo.",
+      "quantidade": 50
+    },
+    {
+      "id": "item7",
+      "nome": "Cajado das Almas Inquietas",
+      "material": "Madeira de Cipreste com Crânios de Guerreiros Caídos<br>Incomum",
+      "efeito": "Concede +2 em poder. Uma vez por dia, pode lançar 'Reviver os Mortos'.",
+      "imagem": "/img/lojanecromancer/cajadoAlmas.png",
+      "valor": 3500,
+      "descricao": "Dano: 10 true. Durabilidade: 2. Concede +2 para lançar feitiços e dons e permite 'Reviver os Mortos' uma vez por dia.",
+      "quantidade": 10
+    },
+    {
+      "id": "item8",
+      "nome": "Foice da Colheita Sombria",
+      "material": "Lâmina de Aço Necrótico e Punho de Ossos Sombrios<br>Incomum",
+      "efeito": "Concede +1d10 de dano adicional necrótico. Uma vez por dia, pode lançar 'Toque Vampírico'.",
+      "imagem": "/img/lojanecromancer/foiceColheita.png",
+      "valor": 8500,
+      "descricao": "Dano: 40 true. Durabilidade: 3s. Concede +1d10 de dano necrótico e pode lançar 'Toque Vampírico' uma vez por dia recuperando 10% da vida máxima do alvo.",
+      "quantidade": 2
+    },
+    {
+      "id": "item9",
+      "nome": "Varinha do Senhor dos Mortos",
+      "material": "Madeira enegrecida de Carvalhos Ancestrais e Gemas Ocultas<br>Incomum",
+      "efeito": "Concede +2 de bônus para lançar feitiços necromânticos. Uma vez por dia, permite lançar 'Animar Mortos'.",
+      "imagem": "/img/lojanecromancer/varinhaMortos.png",
+      "valor": 3200,
+      "descricao": "Permite lançar 'Animar Mortos' uma vez por dia e concede bônus em feitiços necromânticos.",
+      "quantidade": 0
+    },
+    {
+      "id": "item10",
+      "nome": "Cetro da Putrefação",
+      "material": "Ébano Sombrio com Runas Necróticas<br>Incomum",
+      "efeito": "Concede +2d20 de dano adicional de ácido. Uma vez por dia, pode lançar 'Névoa Mortal'.",
+      "imagem": "/img/lojanecromancer/cetroPutrefacao.png",
+      "valor": 3700,
+      "descricao": "Durabilidade: 2s. Permite conjurar 'Névoa Mortal' uma vez por dia, faz que todos raio de 5x5 fique envenenado 15 dano por turno.",
+      "quantidade": 9
+    },
+    {
+      "id": "item11",
+      "nome": "Livro da Ressurreição Profana",
+      "material": "Couro de Bestas Abissais e Pergaminhos de Magia Sombria<br>Incomum",
+      "efeito": "Concede +2 de bônus para feitiços necromânticos. Pode lançar 'Criar Mortos' uma vez por dia.",
+      "imagem": "/img/lojanecromancer/livroRessussitarProfona.png",
+      "valor": 3400,
+      "descricao": "Durabilidade: 2s. Concede +2 de bônus em feitiços necromânticos e permite conjurar 'Criar Mortos' uma vez por dia.",
+      "quantidade": 9
+    },
+    {
+      "id": "item12",
+      "nome": "Lança da Morte Sussurrante",
+      "material": "Aço Sombrio com Essência de Almas Perdidas",
+      "efeito": "Concede +1d20 de dano adicional necrótico. Uma vez por dia, pode lançar 'Cegueira/Surdez'.",
+      "imagem": "/img/lojanecromancer/lançaMorte.png",
+      "valor": 2800,
+      "descricao": "Durabilidade: 3s. permite lançar 'Cegueira/Surdez' uma vez por dia.",
+      "quantidade": 1
+    },
+    {
+      "id": "item13",
+      "nome": "Faca da Drenagem Vital",
+      "material": "Lâmina de Sombras e Cristais Vampíricos<br>Lendario",
+      "efeito": "C Ao atingir um alvo, cura o usuário em uma quantidade equivalente ao dano causado, dano fixo sem poder sofrer alterações nem de runas esse dano não poderá ser alterado nem por defesa (nenhuma runa consegue defender) e causará 35 dano.",
+      "imagem": "/img/lojanecromancer/facaVital.png",
+      "valor": 2200,
+      "descricao": "Perfuração. Durabilidade: 3. Ao atingir um alvo, cura o usuário em proporção ao dano causado.",
+      "quantidade": 2
+    }
+  ]
 }

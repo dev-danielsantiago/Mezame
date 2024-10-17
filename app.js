@@ -177,7 +177,7 @@ function registrarTransacao(remetente, destinatario, valor, res) {
                 return res.status(500).json({ message: 'Erro ao atualizar os dados das transações.' });
             }
 
-            return res.status(200).json({ message: 'Transferência e transação com sucesso!' });
+            return res.status(200).json({ message: 'Transferência com sucesso!' });
         });
     });
 }
@@ -387,9 +387,9 @@ app.post('/enviar-presente', (req, res) => {
 
             // Determinar o custo da caixa
             let custoCaixa = 0;
-            if (tipoCaixa === 'normal') custoCaixa = 100;
-            else if (tipoCaixa === 'superior') custoCaixa = 200;
-            else if (tipoCaixa === 'lenda') custoCaixa = 300;
+            if (tipoCaixa === 'normal') custoCaixa = 450;
+            else if (tipoCaixa === 'superior') custoCaixa = 1000;
+            else if (tipoCaixa === 'lenda') custoCaixa = 10000;
 
             if (playerRemetente.saldo < custoCaixa) {
                 console.error('Saldo insuficiente.');
@@ -433,7 +433,7 @@ app.post('/enviar-presente', (req, res) => {
                         else tipoSorteado = 'Lendário';
                     } else if (tipoCaixa === 'lenda') {
                         if (probabilidade <= 20) tipoSorteado = 'Comum';
-                        else if (probabilidade <= 50) tipoSorteado = 'Incomum';
+                        else if (probabilidade <= 70) tipoSorteado = 'Incomum';
                         else tipoSorteado = 'Lendário';
                     }
 

@@ -1,1 +1,80 @@
-{"itens":[{"nome":"Poção de Cura Simples","material":"Lesma sangrenta, olhos de morcego e planta dragon de fogo","tipo":"Comum","imagem":"caminho/para/imagem/pocao_cura_simples.png","valor":50,"descricao":"Cura 5 pontos de vida. Monitorar toxicidade após uso.","quantidade":17},{"nome":"Poção de Aura Simples","material":"Ossos de ethuu, língua do sapo de gelo e planta dragon de gelo","tipo":"Comum","imagem":"caminho/para/imagem/pocao_aura_simples.png","valor":50,"descricao":"Restaura 5 pontos de aura. Monitorar toxicidade após uso.","quantidade":15},{"nome":"Poção Veneno de Aura Simples","material":"Sangue de bruxa, língua do bode e ervas do demônio","tipo":"Comum","imagem":"caminho/para/imagem/pocao_veneno_aura.png","valor":100,"descricao":"Reduz 2 pontos de aura. Usar com cautela.","quantidade":10},{"nome":"Poção de Cura Avançada","material":"Coração de salamandra e erva de cura do sol","tipo":"Raro","imagem":"caminho/para/imagem/pocao_cura_avancada.png","valor":200,"descricao":"Cura 20 pontos de vida instantaneamente. Uso seguro para aventureiros experientes.","quantidade":5},{"nome":"Poção de Mana Restauradora","material":"Cristal arcano e lágrima de dragão","tipo":"Raro","imagem":"caminho/para/imagem/pocao_mana_restauradora.png","valor":150,"descricao":"Restaura 30 pontos de mana. Ideal para conjuradores em combate prolongado.","quantidade":8},{"nome":"Poção de Inverno Eterno","material":"Essência de gelo e sangue de gigante do frio","tipo":"Lendário","imagem":"caminho/para/imagem/pocao_inverno_eterno.png","valor":500,"descricao":"Concede imunidade temporária ao frio e aumenta o poder de magias de gelo.","quantidade":3},{"nome":"Elixir da Vitalidade","material":"Raiz de mandrágora e essência de vida","tipo":"Épico","imagem":"caminho/para/imagem/elixir_vitalidade.png","valor":1000,"descricao":"Aumenta temporariamente os pontos de vida máximos do usuário em 50%.","quantidade":0},{"nome":"Poção de Invisibilidade","material":"Olho de camaleão e pó de fada","tipo":"Raro","imagem":"caminho/para/imagem/pocao_invisibilidade.png","valor":400,"descricao":"Torna o usuário invisível por 5 minutos. Não afeta o som emitido.","quantidade":4}]}
+{
+  "itens": [
+    {
+      "id": "pocao1",
+      "nome": "Poção Cura Simples",
+      "material": "Lesma sangrenta, olhos de morcego e planta dragon de fogo<br>Comum",
+      "efeito": "Restaura 35 de vitalidade",
+      "imagem": "/img/lojageral/poçãoCura.png",
+      "valor": 479.98,
+      "descricao": "Uma poção simples que restaura 35 pontos de vitalidade. Atenção: possui toxidade que precisa ser monitorada.",
+      "quantidade": 988
+    },
+    {
+      "id": "pocao2",
+      "nome": "Poção Aura Simples",
+      "material": "Ossos de Ethuu, língua do sapo de gelo e planta dragon de gelo<br>Comum",
+      "efeito": "Restaura 35 de aura",
+      "imagem": "/img/lojageral/poçãoAura.jpg",
+      "valor": 641,
+      "descricao": "Esta poção restaura 35 pontos de aura. Possui toxidade, e o uso excessivo pode causar envenenamento.",
+      "quantidade": 988
+    },
+    {
+      "id": "pocao3",
+      "nome": "Poção Veneno de Aura Simples",
+      "material": "Sangue de bruxa, língua do bode e ervas do demônio<br>inComum",
+      "efeito": "Envenena a aura, causando perda de 2 pontos de aura.",
+      "imagem": "/img/lojageral/poçãoVeneno.png",
+      "valor": 2900.01,
+      "descricao": "Uma poção perigosa que drena 2 pontos de aura. Útil contra inimigos que dependem de aura.",
+      "quantidade": 990
+    },
+    {
+      "nome": "Poção de Cura Avançada",
+      "material": "Coração de salamandra e erva de cura do sol<br>Raro",
+      "imagem": "/img/lojaPinel/poçãoAvançada.jpg",
+      "efeito": "Cura 90 pontos de vida instantaneamente.",
+      "descricao": "Uso seguro para aventureiros experientes.",
+      "valor": 1500.14,
+      "quantidade": 992
+    },
+    {
+      "nome": "Poção de Mana Restauradora",
+      "material": "Cristal arcano e lágrima de dragão<br>inComum",
+      "imagem": "/img/lojaPinel/poçãoManaAvançado.jpg",
+      "efeito": "Restaura 70 pontos de mana.",
+      "descricao": "Ideal para conjuradores em combate prolongado.",
+      "valor": 1504.1,
+      "quantidade": 990
+    },
+    {
+      "nome": "Poção de Inverno Eterno",
+      "material": "Essência de gelo e sangue de gigante do frio<br>inComum",
+      "imagem": "/img/lojaPinel/poçãoFrio.jpg",
+      "efeito": "Se não for frio com aura dura 2 horas, agora é frio com 1 round.",
+      "descricao": "Concede imunidade temporária ao frio e aumenta o poder de magias de gelo.",
+      "valor": 15000,
+      "quantidade": 299
+    },
+    {
+      "nome": "Elixir da Vitalidade",
+      "material": "Raiz de mandrágora e essência de vida",
+      "imagem": "/img/lojaPinel/elixirVitalidade.jpg",
+      "efeito": "Aumenta vida máxima em 50% durante 2 turnos.",
+      "descricao": "Aumenta temporariamente os pontos de vida máximos do usuário.",
+      "valor": 100000.01,
+      "quantidade": 10
+    },
+    {
+      "nome": "Poção de Invisibilidade",
+      "material": "Olho de camaleão e pó de fada",
+      "tipo": "Raro",
+      "imagem": "/img/lojaPinel/poçãoInvsibilidade.jpg",
+      "efeito": "Torna o usuário invisível por 3 turnos",
+      "descricao": "Não afeta o som emitido.",
+      "valor": 40000,
+      "quantidade": 40
+    }
+  ]
+}

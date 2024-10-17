@@ -1,64 +1,64 @@
 {
-    "itens": [
-        {
-            "id": "lutador1",
-            "nome": "Punhos de Ébano",
-            "material": "Aço de Ébano, Ouro e Couro de Lobo Preto",
-            "efeito": "Ki negro: A cada dano crítico, absorve 1d4 pontos de vida do inimigo atingido.",
-            "imagem": "/img/itens/punhosDeEbano.png",
-            "valor": 1800,
-            "descricao": "Manoplas poderosas forjadas com ébano, capazes de absorver a energia vital dos inimigos com cada golpe crítico.",
-            "quantidade": 2
-        },
-        {
-            "id": "lutador2",
-            "nome": "Garras do Tigre",
-            "material": "Couro reforçado com garras afiadas",
-            "efeito": "Aumenta o dano dos ataques desarmados em +1d4. Concede +1 na CA quando empunhado.",
-            "imagem": "/img/itens/garrasDoTigre.png",
-            "valor": 1500,
-            "descricao": "Luvas de couro imitando as garras de um tigre, ideais para golpes rápidos e mortais, além de oferecer proteção adicional.",
-            "quantidade": 4
-        },
-        {
-            "id": "lutador3",
-            "nome": "Manoplas da Serpente",
-            "material": "Couro com entalhes de serpentes",
-            "efeito": "Aumenta o dano dos ataques desarmados em +1d6 de dano ácido. Concede +1 na CA.",
-            "imagem": "/img/itens/manoplasDaSerpente.png",
-            "valor": 2000,
-            "descricao": "Manoplas ágeis e precisas que aumentam a eficácia dos ataques desarmados com dano adicional de ácido.",
-            "quantidade": 3
-        },
-        {
-            "id": "lutador4",
-            "nome": "Luvas da Tempestade Estática",
-            "material": "Couro reforçado com placas de metal",
-            "efeito": "Causa 1d8 de dano de trovão adicional e concede resistência a dano de trovão e relâmpago.",
-            "imagem": "/img/itens/luvasDaTempestadeEstatica.png",
-            "valor": 2200,
-            "descricao": "Luvas imbuídas com energia elétrica, perfeitas para lutar contra inimigos com resistência a dano físico.",
-            "quantidade": 1
-        },
-        {
-            "id": "lutador5",
-            "nome": "Luvas do Aço Abrasador",
-            "material": "Aço incandescente",
-            "efeito": "Causa 1d8 de dano de fogo adicional nos ataques desarmados e concede resistência a dano de fogo.",
-            "imagem": "/img/itens/luvasDoAcoAbrasador.png",
-            "valor": 2500,
-            "descricao": "Luvas de aço incandescente que causam dano de fogo adicional e tornam o portador resistente ao fogo.",
-            "quantidade": 2
-        },
-        {
-            "id": "lutador6",
-            "nome": "Manoplas do Punho Dourado",
-            "material": "Aço banhado a ouro",
-            "efeito": "Aumenta o dano dos ataques desarmados em +2d6 de dano radiante.",
-            "imagem": "/img/itens/manoplasDoPunhoDourado.png",
-            "valor": 3000,
-            "descricao": "Manoplas divinas que canalizam poder sagrado para golpes radicais, emitindo uma luz dourada.",
-            "quantidade": 1
-        }
-    ]
+  "itens": [
+    {
+      "id": "lutador1",
+      "nome": "Punhos de Ébano",
+      "material": "Aço de Ébano, Ouro e Couro de Lobo Preto<br> inComum",
+      "efeito": "Ki negro: A cada dano crítico, metade do dano infligido no inimigo atingido. Chance maior de critico +1.",
+      "imagem": "/img/lojalutador/Punhos de ébano.jpg",
+      "valor": 2800,
+      "descricao": "Manoplas poderosas forjadas com ébano, capazes de absorver a energia vital dos inimigos com cada golpe crítico.",
+      "quantidade": 2
+    },
+    {
+      "id": "lutador2",
+      "nome": "Garras do Tigre",
+      "material": "Couro reforçado com garras afiadas<br>Comum",
+      "efeito": "Aumenta o dano dos ataques desarmados em 25. Concede +1 em acerto.",
+      "imagem": "/img/lojalutador/Garras do Tigre.jpg",
+      "valor": 2500,
+      "descricao": "Luvas de couro imitando as garras de um tigre, ideais para golpes rápidos e mortais, além de oferecer proteção adicional.",
+      "quantidade": 40
+    },
+    {
+      "id": "lutador3",
+      "nome": "Manoplas da Serpente",
+      "material": "Couro com entalhes de serpentes<br>Incomum",
+      "efeito": "Aumenta o dano dos ataques desarmados em 25 de dano. Concede +2 acerto.",
+      "imagem": "/img/lojalutador/Manoplas da Serpente.jpg",
+      "valor": 2500,
+      "descricao": "Manoplas ágeis e precisas que aumentam a eficácia dos ataques desarmados com dano adicional.",
+      "quantidade": 30
+    },
+    {
+      "id": "lutador4",
+      "nome": "Luvas da Tempestade Estática",
+      "material": "Couro reforçado com placas de metal<br>Incomum",
+      "efeito": "Causa 45 de dano de trovão adicional e concede resistência a dano de trovão e relâmpago.",
+      "imagem": "/img/lojalutador/Luvas da Tempestade Estática.jpg",
+      "valor": 3200,
+      "descricao": "Luvas imbuídas com energia elétrica, perfeitas para lutar contra inimigos com resistência a dano físico.",
+      "quantidade": 9
+    },
+    {
+      "id": "lutador5",
+      "nome": "Luvas do Aço Abrasador",
+      "material": "Aço incandescente<br>Incomum",
+      "efeito": "Causa 3d10 de dano de fogo adicional nos ataques desarmados e concede resistência a dano de fogo.",
+      "imagem": "/img/lojalutador/Luvas do Aço Abrasador.jpg",
+      "valor": 3500,
+      "descricao": "Luvas de aço incandescente que causam dano de fogo adicional e tornam o portador resistente ao fogo.",
+      "quantidade": 20
+    },
+    {
+      "id": "lutador6",
+      "nome": "Manoplas do Punho Dourado",
+      "material": "Aço banhado a ouro",
+      "efeito": "Aumenta o dano dos ataques desarmados em 70 de dano, malignos.",
+      "imagem": "/img/lojalutador/Manoplas do Punho Dourado.jpg",
+      "valor": 30000,
+      "descricao": "Manoplas divinas que canalizam poder sagrado para golpes radicais, emitindo uma luz dourada.",
+      "quantidade": 10
+    }
+  ]
 }

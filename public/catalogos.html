@@ -9,11 +9,11 @@
 <body>
     <header>
         <a href="dashboard.html"><img src="img/voltar.png" alt=""></a>
-        <h1>Catálogos de Comércio</h1>
+        <h1>Visor Arcano</h1>
     </header>
     <main>
         <section class="catalogos">
-            <h2>Escolha um Comércio</h2>
+            <h2>Comércios</h2>
             <ul id="catalogos-list" class="catalogos-list">
                 <li class="catalogo-item" style="background-color: rgb(250, 183, 13);">
                     <a href="jokenpo.html">
@@ -54,19 +54,13 @@
                 <li class="catalogo-item">
                     <a href="lojas/lojaguerreiro.html">
                         <img src="img/cavaleiro2.png" alt="Loja do Guerreiro">
-                        <span>Loja do Cavaleiro</span>
+                        <span>Loja do Guerreiro</span>
                     </a>
                 </li>
                 <li class="catalogo-item">
                     <a href="lojas/lojalutador.html">
                         <img src="img/marcial.png" alt="Loja do Lutador">
                         <span>Loja do Lutador</span>
-                    </a>
-                </li>
-                <li class="catalogo-item">
-                    <a href="#">
-                        <img src="img/ladrao.png" alt="Loja do Assassino">
-                        <span>Loja do Assassino</span>
                     </a>
                 </li>
                 <li class="catalogo-item">
@@ -77,8 +71,20 @@
                 </li>
                 <li class="catalogo-item">
                     <a href="#">
+                        <img src="img/curandeiro.png" alt="Loja do Monge">
+                        <span>Lojas do Suporte</span>
+                    </a>
+                </li>
+                <li class="catalogo-item">
+                    <a href="#">
                         <img src="img/magico.png" alt="Loja do Nen-Jutsus">
                         <span>Lojas Nen-Jutsus</span>
+                    </a>
+                </li>
+                <li class="catalogo-item">
+                    <a href="#">
+                        <img src="img/ladrao.png" alt="Loja do Assassino">
+                        <span>Loja do Assassino</span>
                     </a>
                 </li>
                 <li class="catalogo-item">
@@ -100,5 +106,10 @@
     <footer>
         <p>&copy; 2024 Porquinho Mágico RPG. Todos os direitos reservados.</p>
     </footer>
+    <script>
+        const audioBackground = document.getElementById('audioBackground');
+        audioBackground.volume = 0.15;
+    </script>
+    <audio id="audioBackground" src="audio/background.m4a" loop autoplay></audio>
 </body>
 </html>

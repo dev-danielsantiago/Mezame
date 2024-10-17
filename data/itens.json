@@ -1,36 +1,36 @@
 {
     "itens": [
         {
-            "nome": "Luva de Batalha",
-            "material": "Couro reforçado e metal leve",
+            "nome": "Poção Cura Simples",
+            "material": "Lesma sangrenta, olhos de morcego e planta dragon de fogo",
             "tipo": "Comum",
-            "imagem": "caminho/para/luva_batalha.jpg",
-            "valor": 200,
-            "descricao": "Luva resistente usada por lutadores para melhorar a aderência e aumentar a proteção durante combates. Nível: Comum."
+            "imagem": "/img/lojageral/poçãoCura.png",
+            "valor": 559.99,
+            "descricao": "Restaura 35 de vitalidade. Atenção: possui toxidade que precisa ser monitorada."
         },
         {
-            "nome": "Cinto de Força",
-            "material": "Couro e fivelas de ferro",
+            "nome": "Poção Aura Simples",
+            "material": "Ossos de Ethuu, língua do sapo de gelo e planta dragon de gelo",
             "tipo": "Incomum",
-            "imagem": "caminho/para/cinto_forca.jpg",
-            "valor": 500,
-            "descricao": "Cinto mágico que concede um bônus de força ao usuário, ideal para levantar cargas pesadas em combate. Nível: Incomum."
+            "imagem": "/img/lojageral/poçãoAura.jpg",
+            "valor": 701,
+            "descricao": "Esta poção restaura 35 pontos de aura."
         },
         {
-            "nome": "Botas de Velocidade",
-            "material": "Couro de lobo e aço leve",
+            "nome": "Anel do Espírito Familiar",
+            "material": "Paládio com fragmentos de espíritos",
             "tipo": "Lendário",
-            "imagem": "caminho/para/botas_velocidade.jpg",
-            "valor": 1000,
-            "descricao": "Essas botas permitem ao lutador mover-se com grande rapidez, aumentando sua agilidade durante batalhas. Nível: Lendário."
+            "imagem": "/img/lojageral/anelFamiliar.png",
+            "valor": 6125,
+            "descricao": "Permite armazenar e convocar um familiar."
         },
         {
-            "nome": "Capacete do Gladiador",
-            "material": "Aço e couro",
-            "tipo": "Comum",
-            "imagem": "caminho/para/capacete_gladiador.jpg",
-            "valor": 300,
-            "descricao": "Capacete resistente que oferece proteção adicional à cabeça, típico de gladiadores em arenas. Nível: Comum."
+            "nome": "Traje Tático Personalizado",
+            "material": "Aço, ferro, couro de besta mística, madeira e obsidiana",
+            "tipo": "Lendário",
+            "imagem": "/img/lojageral/trajePersonalizado.png",
+            "valor": null,
+            "descricao": "100 DHP"
         },
         {
             "nome": "Armadura de Combate",
@@ -38,7 +38,7 @@
             "tipo": "Lendário",
             "imagem": "caminho/para/armadura_combate.jpg",
             "valor": 1500,
-            "descricao": "Armadura robusta que oferece alta proteção em combate corpo a corpo, usada por lutadores experientes. Nível: Lendário."
+            "descricao": "75 DHP."
         }
     ]
 }
