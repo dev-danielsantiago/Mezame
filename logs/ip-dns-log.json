@@ -19413,5 +19413,10 @@
     "ip": "45.187.227.131",
     "hostname": "45-187-227-131.redelognet.com.br",
     "timestamp": "2024-10-17T22:15:15.417Z"
+  },
+  {
+    "ip": "::1",
+    "hostname": "localhost",
+    "timestamp": "2024-10-17T23:06:57.937Z"
   }
 ]
